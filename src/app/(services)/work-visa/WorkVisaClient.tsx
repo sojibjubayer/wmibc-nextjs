@@ -199,9 +199,9 @@ function CountryCard({ item }: { item: CountryItem }) {
   return (
     <Link
       href={item.slug}
-      className="group relative flex flex-col h-full overflow-hidden rounded-[24px] border border-(--border-soft) bg-(--bg-card) p-6 shadow-(--shadow-soft) transition-all duration-300 hover:-translate-y-1.5 hover:border-(--accent-cyan) hover:shadow-xl"
+      className="group relative flex flex-col h-full overflow-hidden rounded-4xl border border-(--border-soft) bg-(--bg-card) p-6 shadow-(--shadow-soft) transition-all duration-300 hover:-translate-y-1.5 hover:border-(--accent-cyan) hover:shadow-xl"
     >
-      <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-(--brand-royal) to-(--accent-cyan) opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+      <div className="absolute inset-x-0 top-0 h-1.5 bg-linear-to-r from-(--brand-royal) to-(--accent-cyan) opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
       <div className="mb-4 flex items-start justify-between gap-3">
         <div>
@@ -293,7 +293,7 @@ export default function WorkVisaClient() {
             </div>
 
             <div className="lg:col-span-5">
-              <div className="rounded-[32px] border border-(--border-soft) bg-white p-8 shadow-2xl">
+              <div className="rounded-4xl border border-(--border-soft) bg-white p-8 shadow-2xl">
                 <div className="mb-8 flex items-center gap-4">
                   <div className="rounded-2xl bg-(--bg-soft-blue) p-4 text-(--brand-royal)">
                     <BriefcaseBusiness className="h-7 w-7" />
