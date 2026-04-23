@@ -109,7 +109,7 @@ export default function StudyVisaClient() {
             </div>
 
             {/* Quick Stats Card */}
-            <div className="rounded-[32px] border border-(--border-soft) bg-white p-6 shadow-xl lg:p-8">
+            <div className="rounded-4xl border border-(--border-soft) bg-white p-6 shadow-xl lg:p-8">
                <div className="mb-6 flex items-center gap-3">
                  <div className="rounded-2xl bg-(--bg-soft-blue) p-3">
                    <BookOpen className="h-6 w-6 text-(--brand-royal)" />
@@ -151,7 +151,7 @@ export default function StudyVisaClient() {
           {services.map((service) => {
             const Icon = service.icon;
             return (
-              <div key={service.title} className="group rounded-[24px] border border-(--border-soft) bg-white p-6 shadow-(--shadow-soft) transition-all hover:-translate-y-1 hover:border-(--accent-cyan)">
+              <div key={service.title} className="group rounded-4xl border border-(--border-soft) bg-white p-6 shadow-(--shadow-soft) transition-all hover:-translate-y-1 hover:border-(--accent-cyan)">
                 <div className="mb-5 inline-flex rounded-2xl bg-(--bg-soft-blue) p-3 text-(--brand-royal) group-hover:bg-(--brand-royal) group-hover:text-white transition-colors">
                   <Icon className="h-6 w-6" />
                 </div>
@@ -168,7 +168,7 @@ export default function StudyVisaClient() {
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <div className="grid gap-8 lg:grid-cols-2">
             {/* Process */}
-            <div className="rounded-[32px] border border-(--border-soft) bg-white p-8 shadow-sm">
+            <div className="rounded-4xl border border-(--border-soft) bg-white p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-(--text-heading) mb-8">Simple step-by-step journey</h2>
               <div className="space-y-6">
                 {processSteps.map((item) => (
@@ -186,7 +186,7 @@ export default function StudyVisaClient() {
             </div>
 
             {/* Countries */}
-            <div className="rounded-[32px] border border-(--border-soft) bg-white p-8 shadow-sm">
+            <div className="rounded-4xl border border-(--border-soft) bg-white p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-(--text-heading) mb-8">Popular Destinations</h2>
               <div className="grid gap-4 sm:grid-cols-2">
                 {destinations.map((country) => (
