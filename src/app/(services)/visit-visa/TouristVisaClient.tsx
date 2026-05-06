@@ -24,21 +24,21 @@ type Destination = {
 };
 
 const destinations: Destination[] = [
-  { name: "China", slug: "/tourist-visa/china", type: "Tourist & Visit Visas", popular: true },
-  { name: "South Korea", slug: "/tourist-visa/south-korea", type: "Tourist & Visit Visas", popular: true },
-  { name: "Japan", slug: "/tourist-visa/japan", type: "Tourist & Visit Visas", popular: true },
-  { name: "Thailand", slug: "/tourist-visa/thailand", type: "Tourist & Visit Visas" },
-  { name: "Malaysia", slug: "/tourist-visa/malaysia", type: "Tourist & Visit Visas" },
-  { name: "UK", slug: "/tourist-visa/uk", type: "Tourist & Visit Visas", popular: true },
-  { name: "Canada", slug: "/tourist-visa/canada", type: "Tourist & Visit Visas" },
-  { name: "USA", slug: "/tourist-visa/usa", type: "Tourist & Visit Visas", popular: true },
-  { name: "India", slug: "/tourist-visa/india", type: "Tourist & Visit Visas" },
-  { name: "Singapore", slug: "/tourist-visa/singapore", type: "Tourist & Visit Visas" },
-  { name: "Netherlands", slug: "/tourist-visa/netherlands", type: "Tourist & Visit Visas" },
-  { name: "Australia", slug: "/tourist-visa/australia", type: "Tourist & Visit Visas" },
-  { name: "New Zealand", slug: "/tourist-visa/new-zealand", type: "Tourist & Visit Visas" },
-  { name: "Turkey", slug: "/tourist-visa/turkey", type: "Tourist & Visit Visas" },
-  { name: "Europe", slug: "/tourist-visa/europe", type: "Tourist & Visit Visas", popular: true },
+  { name: "China", slug: "/visit-visa/china", type: "Tourist & Visit Visas", popular: true },
+  { name: "South Korea", slug: "/visit-visa/south-korea", type: "Tourist & Visit Visas", popular: true },
+  { name: "Japan", slug: "/visit-visa/japan", type: "Tourist & Visit Visas", popular: true },
+  { name: "Thailand", slug: "/visit-visa/thailand", type: "Tourist & Visit Visas" },
+  { name: "Malaysia", slug: "/visit-visa/malaysia", type: "Tourist & Visit Visas" },
+  { name: "UK", slug: "/visit-visa/uk", type: "Tourist & Visit Visas", popular: true },
+  { name: "Canada", slug: "/visit-visa/canada", type: "Tourist & Visit Visas" },
+  { name: "USA", slug: "/visit-visa/usa", type: "Tourist & Visit Visas", popular: true },
+  { name: "India", slug: "/visit-visa/india", type: "Tourist & Visit Visas" },
+  { name: "Singapore", slug: "/visit-visa/singapore", type: "Tourist & Visit Visas" },
+  { name: "Netherlands", slug: "/visit-visa/netherlands", type: "Tourist & Visit Visas" },
+  { name: "Australia", slug: "/visit-visa/australia", type: "Tourist & Visit Visas" },
+  { name: "New Zealand", slug: "/visit-visa/new-zealand", type: "Tourist & Visit Visas" },
+  { name: "Turkey", slug: "/visit-visa/turkey", type: "Tourist & Visit Visas" },
+  { name: "Europe", slug: "/visit-visa/europe", type: "Tourist & Visit Visas", popular: true },
 ];
 
 export default function TouristVisaClient() {

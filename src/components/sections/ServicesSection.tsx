@@ -7,7 +7,7 @@ const services = [
     title: "Visit & Tourist Visa",
     description:
       "Apply for visit visas and tourist visas from Qatar with expert guidance for Europe, UK, Canada, Australia, and more.",
-    href: "/tourist-business-visit",
+    href: "/visit-visa",
   },
   {
     icon: Briefcase,

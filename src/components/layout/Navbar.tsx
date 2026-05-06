@@ -16,7 +16,7 @@ const navLinks = [
 
 const serviceLinks = [
   { label: "All Services", href: "/services" },
-  { label: "Business / Visit Visa", href: "/tourist-business-visit" },
+  { label: "Business / Visit Visa", href: "/visit-visa" }, 
   { label: "Work Visa", href: "/work-visa" },
   { label: "Study Visa", href: "/study-visa" },
   { label: "Business Setup", href: "/business-setup" },
@@ -24,7 +24,7 @@ const serviceLinks = [
 
 const servicePaths = new Set([
   "/services",
-  "/tourist-business-visit",
+  "/visit-visa",
   "/work-visa",
   "/study-visa",
   "/business-setup",
@@ -39,7 +39,7 @@ export default function Navbar() {
   const isActive = (href: string) => {
     if (href === "/") return pathname === "/";
     return pathname === href;
-  };
+  }; 
 
   const isServicesActive = servicePaths.has(pathname);
 
