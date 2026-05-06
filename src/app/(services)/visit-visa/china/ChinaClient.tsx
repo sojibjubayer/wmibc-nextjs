@@ -33,6 +33,23 @@ const places = [
   "West Lake, Hangzhou",
   "Chengdu Panda Base",
 ];
+const badges = [
+  "Top Attraction",
+  "Must Visit",
+  "Travel Highlight",
+  "Popular Spot",
+];
+
+const cardStyles = [
+  "from-blue-500/10 to-cyan-500/10 border-blue-200",
+  "from-violet-500/10 to-fuchsia-500/10 border-violet-200",
+  "from-emerald-500/10 to-teal-500/10 border-emerald-200",
+  "from-orange-500/10 to-amber-500/10 border-orange-200",
+  "from-pink-500/10 to-rose-500/10 border-pink-200",
+  "from-indigo-500/10 to-blue-500/10 border-indigo-200",
+  "from-sky-500/10 to-blue-500/10 border-sky-200",
+  "from-purple-500/10 to-indigo-500/10 border-purple-200",
+];
 
 export default function ChinaClient() {
   return (
@@ -214,13 +231,25 @@ export default function ChinaClient() {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {places.map((place) => (
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {places.map((place, index) => (
               <div
                 key={place}
-                className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+                className={`group relative overflow-hidden rounded-[1.75rem] border bg-linear-to-br p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+                  cardStyles[index % cardStyles.length]
+                }`}
               >
-                <p className="text-base font-bold text-slate-950">{place}</p>
+                <div className="absolute right-0 top-0 h-24 w-24 rounded-full bg-white/30 blur-2xl" />
+
+                <div className="relative">
+                  <div className="mb-4 inline-flex rounded-full bg-white/70 px-3 py-1 text-xs font-semibold text-slate-700 backdrop-blur">
+                    {badges[index % badges.length]}
+                  </div>
+
+                  <p className="text-base font-bold leading-7 text-slate-950">
+                    {place}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

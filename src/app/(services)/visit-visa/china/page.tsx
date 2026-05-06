@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import ChinaClient from "./ChinaClient";
 
-const siteUrl = "https://wmibc.com";
+const siteUrl = "https://www.wmibc.com";
 const pageUrl = `${siteUrl}/visit-visa/china`;
 const ogImage = `${siteUrl}/images/visit-visa/china-visit-visa.jpg`;
 
