@@ -135,7 +135,7 @@ export default function PortugalWClient() {
                 <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-slate-200 bg-white/85 px-4 py-2 text-xs font-semibold text-blue-900 shadow-sm backdrop-blur-md sm:text-sm">
                   <Sparkles className="h-4 w-4 shrink-0 text-cyan-500" />
                   <span className="truncate">
-                    Portugal Agriculture D1 Work Visa from Qatar
+                    Portugal Work Visa from Qatar
                   </span>
                 </div>
 
