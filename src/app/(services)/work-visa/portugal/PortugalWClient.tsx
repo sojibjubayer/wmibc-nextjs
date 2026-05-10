@@ -140,7 +140,7 @@ export default function PortugalWClient() {
                 </div>
 
                 <h1 className="text-3xl font-black leading-[1.1] tracking-tight text-slate-900 sm:text-5xl md:text-6xl lg:text-7xl">
-                  Portugal Agriculture D1 <br className="hidden sm:block" />
+                  Portugal <br className="hidden sm:block" />
                   <span className="text-blue-600">Work Visa Processing</span>
                 </h1>
 
