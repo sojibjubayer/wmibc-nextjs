@@ -35,7 +35,7 @@ const countries: CountryItem[] = [
   { name: "Slovakia", slug: "/work-visa/slovakia", tagline: "Factory Worker, Warehouse, Helper", roles: ["Factory Worker", "Warehouse", "Helper"], featured: true },
   { name: "Italy", slug: "/work-visa/italy", tagline: "Light Duty Driver, Forklift Driver, Agricultural Worker, Waiter, Cleaner, Factory Worker", roles: ["Light Duty Driver", "Forklift Driver", "Agricultural Worker", "Waiter / Waitress", "Cleaner", "Factory Worker"] },
   { name: "Cyprus", slug: "/work-visa/cyprus", tagline: "Hospitality, Construction, Warehouse, Helper", roles: ["Hospitality", "Construction", "Warehouse", "Helper"] },
-  { name: "North Macedonia", slug: "/work-visa/macedonia", tagline: "Cleaner, Vegetable Worker", roles: ["Cleaner", "Vegetable Worker"] },
+  { name: "North Macedonia", slug: "/work-visa/north-macedonia", tagline: "Cleaner, Vegetable Worker", roles: ["Cleaner", "Vegetable Worker"] },
   { name: "Montenegro", slug: "/work-visa/montenegro", tagline: "Hospitality, Construction, Warehouse, Electrician, Tile Mason, Gypsum", roles: ["Hospitality", "Construction", "Warehouse", "Electrician", "Tile Mason", "Gypsum"] },
   { name: "Bosnia", slug: "/work-visa/bosnia", tagline: "General Worker", roles: ["General Worker"] },
   { name: "Croatia", slug: "/work-visa/croatia", tagline: "Housekeeping, Butcher, General Worker", roles: ["Housekeeping", "Butcher", "General Worker"] },
