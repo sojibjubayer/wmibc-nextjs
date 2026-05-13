@@ -47,8 +47,8 @@ export default function HeroSection() {
     <section className="relative overflow-hidden bg-[#f8fbff]">
       {/* Premium Background */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -right-20 -top-40 h-80 w-80 rounded-full bg-blue-400/15 blur-[100px] md:h-[32rem] md:w-[32rem] md:blur-[130px]" />
-        <div className="absolute -left-20 top-24 h-80 w-80 rounded-full bg-indigo-600/10 blur-[100px] md:h-[28rem] md:w-[28rem] md:blur-[120px]" />
+        <div className="absolute -right-20 -top-40 h-80 w-80 rounded-full bg-blue-400/15 blur-[100px] md:h-128 md:w-lg md:blur-[130px]" />
+        <div className="absolute -left-20 top-24 h-80 w-80 rounded-full bg-indigo-600/10 blur-[100px] md:h-112 md:w-md md:blur-[120px]" />
         <div className="absolute inset-x-0 bottom-0 h-48 bg-linear-to-t from-white to-transparent" />
       </div>
 
@@ -131,12 +131,12 @@ export default function HeroSection() {
           </div>
 
           {/* Right Hero Image */}
-          <div className="relative mx-auto mt-8 w-full max-w-[560px] lg:mt-0 lg:max-w-none">
+          <div className="relative mx-auto mt-8 w-full max-w-140 lg:mt-0 lg:max-w-none">
             {/* Background Glow */}
-            <div className="absolute -inset-3 rounded-[2rem] bg-linear-to-tr from-blue-600/20 via-cyan-400/10 to-white blur-2xl sm:-inset-4 sm:rounded-[3rem]" />
+            <div className="absolute -inset-3 rounded-4xl bg-linear-to-tr from-blue-600/20 via-cyan-400/10 to-white blur-2xl sm:-inset-4 sm:rounded-[3rem]" />
 
             <div className="relative overflow-hidden rounded-[2.5rem] border border-white bg-white p-2 shadow-2xl shadow-blue-950/10 sm:rounded-[3rem] sm:p-3">
-              <div className="relative aspect-[4/5] min-h-[430px] overflow-hidden rounded-[2rem] bg-slate-100 sm:min-h-[560px] sm:rounded-[2.5rem] lg:min-h-0">
+              <div className="relative aspect-4/5 min-h-170.5 overflow-hidden rounded-4xl bg-slate-100 sm:min-h-140 sm:rounded-[2.5rem] lg:min-h-0">
                 <Image
                   src="/images/home/wmibc-hero.webp"
                   alt="WMIBC immigration consultancy office in Qatar"
