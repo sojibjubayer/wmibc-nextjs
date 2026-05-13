@@ -8,7 +8,6 @@ import {
   ChevronRight,
   Globe2,
   ShieldCheck,
-  Sparkles,
   BadgeCheck,
   Plane,
 } from "lucide-react";
@@ -38,7 +37,7 @@ const heroStats = [
     label: "Visa Destinations",
   },
   {
-    value: "Qatar",
+    value: "Doha",
     label: "Based Consultation",
   },
 ];
@@ -46,27 +45,26 @@ const heroStats = [
 export default function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-[#f8fbff]">
-      {/* Premium Background Blurs - Hidden on tiny screens to improve performance */}
+      {/* Premium Background */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -right-20 -top-40 h-80 w-80 rounded-full bg-blue-400/15 blur-[100px] md:h-130 md:w-130 md:blur-[130px]" />
-        <div className="absolute -left-20 top-24 h-80 w-80 rounded-full bg-indigo-600/10 blur-[100px] md:h-115 md:w-115 md:blur-[120px]" />
+        <div className="absolute -right-20 -top-40 h-80 w-80 rounded-full bg-blue-400/15 blur-[100px] md:h-[32rem] md:w-[32rem] md:blur-[130px]" />
+        <div className="absolute -left-20 top-24 h-80 w-80 rounded-full bg-indigo-600/10 blur-[100px] md:h-[28rem] md:w-[28rem] md:blur-[120px]" />
         <div className="absolute inset-x-0 bottom-0 h-48 bg-linear-to-t from-white to-transparent" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 md:py-20 lg:py-24">
         <div className="grid items-center gap-12 lg:grid-cols-[1fr_0.95fr] lg:gap-14">
-          
           {/* Left Content */}
           <div className="text-center lg:text-left">
-            {/* Tagline Pill */}
-            <div className="mb-6 inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-slate-200 bg-white/80 p-1 pr-4 shadow-sm backdrop-blur lg:justify-start">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-700 px-3 py-1.5 text-[10px] font-bold text-white sm:text-xs">
-               <BadgeCheck className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
+            {/* Trust Badge */}
+            <div className="mx-auto mb-6 inline-flex max-w-full flex-wrap items-center justify-center gap-2 rounded-full border border-slate-200 bg-white/80 p-1 pr-4 shadow-sm backdrop-blur lg:mx-0 lg:justify-start">
+              <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-blue-700 px-3 py-1.5 text-[10px] font-bold text-white sm:text-xs">
+                <BadgeCheck className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
                 WMIBC Official
               </span>
 
               <span className="text-[10px] font-bold uppercase tracking-wider text-slate-900 sm:text-xs sm:tracking-[0.18em]">
-                Trusted Immigration from Qatar
+                Trusted Immigration Consultancy
               </span>
 
               <ChevronRight className="hidden h-3.5 w-3.5 text-blue-600 sm:block" />
@@ -116,12 +114,12 @@ export default function HeroSection() {
               </Link>
             </div>
 
-            {/* Trust Points - Horizontal on desktop, stacked on mobile */}
+            {/* Trust Points */}
             <div className="mt-12 grid gap-3 sm:grid-cols-3">
               {trustPoints.map((point) => (
                 <div
                   key={point}
-                  className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white/80 p-4 shadow-sm backdrop-blur"
+                  className="flex items-center justify-center gap-3 rounded-2xl border border-slate-200 bg-white/80 p-4 shadow-sm backdrop-blur lg:justify-start"
                 >
                   <CheckCircle2 className="h-5 w-5 shrink-0 text-blue-600" />
                   <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
@@ -133,24 +131,24 @@ export default function HeroSection() {
           </div>
 
           {/* Right Hero Image */}
-          <div className="relative mt-8 lg:mt-0">
+          <div className="relative mx-auto mt-8 w-full max-w-[560px] lg:mt-0 lg:max-w-none">
             {/* Background Glow */}
-            <div className="absolute -inset-4 rounded-[3rem] bg-linear-to-tr from-blue-600/20 via-cyan-400/10 to-white blur-2xl" />
+            <div className="absolute -inset-3 rounded-[2rem] bg-linear-to-tr from-blue-600/20 via-cyan-400/10 to-white blur-2xl sm:-inset-4 sm:rounded-[3rem]" />
 
-            <div className="relative overflow-hidden rounded-[2.5rem] border border-white bg-white p-2 shadow-2xl sm:rounded-[3rem] sm:p-3">
-              <div className="relative aspect-4/5 overflow-hidden rounded-4xl bg-slate-100 sm:rounded-[2.5rem]">
+            <div className="relative overflow-hidden rounded-[2.5rem] border border-white bg-white p-2 shadow-2xl shadow-blue-950/10 sm:rounded-[3rem] sm:p-3">
+              <div className="relative aspect-[4/5] min-h-[430px] overflow-hidden rounded-[2rem] bg-slate-100 sm:min-h-[560px] sm:rounded-[2.5rem] lg:min-h-0">
                 <Image
                   src="/images/home/wmibc-hero.webp"
-                  alt="WMIBC immigration consultancy team"
+                  alt="WMIBC immigration consultancy office in Qatar"
                   fill
                   priority
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
-                  className="object-cover"
+                  sizes="(max-width: 640px) 92vw, (max-width: 1024px) 560px, 48vw"
+                  className="object-cover object-center"
                 />
 
-                <div className="absolute inset-0 bg-linear-to-t from-slate-900/60 via-slate-900/5 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-slate-900/55 via-slate-900/5 to-transparent" />
 
-                {/* Floating Verified Card - Scaled for mobile */}
+                {/* Floating Verified Card */}
                 <div className="absolute left-3 top-3 rounded-xl border border-white/20 bg-white/90 p-2 shadow-xl backdrop-blur sm:left-5 sm:top-5 sm:rounded-2xl sm:p-4">
                   <div className="flex items-center gap-2 sm:gap-3">
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-white sm:h-11 sm:w-11 sm:rounded-xl">
@@ -162,13 +160,13 @@ export default function HeroSection() {
                         WMIBC Official
                       </p>
                       <p className="text-xs font-extrabold text-slate-900 sm:text-sm">
-                        Qatar Based
+                        Qatar Office Support
                       </p>
                     </div>
                   </div>
                 </div>
 
-                {/* Bottom Glass Card - Condensed on mobile */}
+                {/* Bottom Glass Card */}
                 <div className="absolute inset-x-3 bottom-4 rounded-2xl border border-white/15 bg-white/15 p-4 text-white shadow-2xl backdrop-blur-md sm:inset-x-5 sm:bottom-6 sm:rounded-3xl sm:p-5">
                   <div className="flex items-start gap-3 sm:gap-4">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/15 sm:h-12 sm:w-12 sm:rounded-2xl">
@@ -179,6 +177,7 @@ export default function HeroSection() {
                       <h3 className="text-sm font-bold sm:text-lg">
                         End-to-End Visa Guidance
                       </h3>
+
                       <p className="mt-1 text-[11px] leading-relaxed text-white/80 sm:text-sm">
                         Professional documentation and application guidance.
                       </p>
@@ -188,7 +187,7 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Stats Cards - Wrapped for mobile flow */}
+            {/* Stats Cards */}
             <div className="relative z-10 -mt-6 grid grid-cols-3 gap-2 px-2 sm:-mt-8 sm:gap-3 sm:px-4">
               {heroStats.map((item) => (
                 <div
@@ -198,6 +197,7 @@ export default function HeroSection() {
                   <p className="text-sm font-extrabold text-blue-700 sm:text-xl">
                     {item.value}
                   </p>
+
                   <p className="mt-1 text-[8px] font-bold uppercase tracking-tight text-slate-500 sm:text-[11px] sm:tracking-wider">
                     {item.label}
                   </p>
@@ -205,20 +205,24 @@ export default function HeroSection() {
               ))}
             </div>
 
-            {/* Floating Mini Card - Hidden on Mobile/Tablet */}
+            {/* Floating Mini Card */}
             <div className="absolute -right-4 top-1/2 hidden -translate-y-1/2 rounded-3xl border border-slate-200 bg-white p-4 shadow-2xl xl:block">
               <div className="flex items-center gap-3">
                 <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-50 text-blue-600">
                   <Plane className="h-5 w-5" />
                 </div>
+
                 <div>
-                  <p className="text-xs font-bold text-slate-500">Popular</p>
-                  <p className="text-sm font-extrabold text-slate-900">Europe Permit</p>
+                  <p className="text-xs font-bold text-slate-500">
+                    Featured Service
+                  </p>
+                  <p className="text-sm font-extrabold text-slate-900">
+                    Europe Work Permit
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
