@@ -6,8 +6,8 @@ const blogs = [
   {
     id: 1,
     title: "Canada Tourist Visa from Qatar – Complete Guide 2026",
-    slug: "canada-tourist-visa-from-qatar",
-    image: "/images/blog/canada-tourist-visa.jpg",
+    slug: "canada-visit-visa-from-qatar",
+    image: "/images/blog/canada-visit-visa.webp", 
     date: "12 Jan 2026",
     category: "Visit Visa",
     excerpt:
@@ -17,7 +17,7 @@ const blogs = [
     id: 2,
     title: "Europe Work Visa Process 2026 for Foreign Workers",
     slug: "europe-work-visa-process-2026",
-    image: "/images/blog/europe-work-visa.jpg",
+    image: "/images/blog/europe-work-visa.webp",
     date: "18 Jan 2026",
     category: "Work Visa",
     excerpt:
@@ -25,9 +25,9 @@ const blogs = [
   },
   {
     id: 3,
-    title: "Student Visa for Malta from Qatar – Step by Step",
-    slug: "malta-student-visa-from-qatar",
-    image: "/images/blog/malta-student-visa.jpg",
+    title: "Student Visa for Malta from Bangladesh – Step by Step",
+    slug: "malta-student-visa-from-bangladesh",
+    image: "/images/blog/malta-student-visa.webp",
     date: "24 Jan 2026",
     category: "Student Visa",
     excerpt:
@@ -53,7 +53,7 @@ export default function BlogClient() {
             Stay updated with the latest work visa, visit visa, student visa,
             and business setup guides for clients from Qatar and GCC countries.
           </p>
-        </div>
+        </div> 
       </section>
 
       {/* Blog Cards */}
@@ -61,7 +61,7 @@ export default function BlogClient() {
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
             {blogs.map((blog) => (
-              <article
+              <article 
                 key={blog.id}
                 className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-[0_10px_30px_rgba(2,6,23,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(2,6,23,0.08)]"
               >

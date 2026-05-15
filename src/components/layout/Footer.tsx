@@ -3,22 +3,22 @@ import { Globe, Mail, MapPin, Phone, Music2 } from "lucide-react";
 
 const services = [
   { label: "Work Visas", href: "/work-visa" },
-  { label: "Business / Visit Visas", href: "/tourist-business-visit" },
+  { label: "Business / Visit Visas", href: "/visit-visa" },
   { label: "Student Visas", href: "/study-visa" },
 ];
 
-const quickLinks = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Blog", href: "/blog" },
-  { label: "Success Stories", href: "/success-stories" },
-  { label: "Contact", href: "/contact" },
+const quickLinks = [ 
+  { label: "Home", href: "/" }, 
+  { label: "About", href: "/about" },  
+  { label: "Blog", href: "/blog" },  
+  { label: "Success Stories", href: "/success-stories" }, 
+  { label: "Contact", href: "/contact" },  
 ];
 
 const socials = [
   {
     label: "Facebook",
-    href: "https://www.facebook.com/",
+    href: "https://www.facebook.com/wmibc",
     icon: Globe,
   },
   {

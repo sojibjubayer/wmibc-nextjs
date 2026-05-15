@@ -74,7 +74,7 @@ export default function Navbar() {
           >
             <button
               type="button"
-              aria-haspopup="true"
+              aria-haspopup="true" 
               aria-expanded={desktopServicesOpen}
               className={`group relative inline-flex items-center gap-1 rounded-full px-4 py-2.5 text-sm font-semibold transition-all duration-200 ${
                 isServicesActive
