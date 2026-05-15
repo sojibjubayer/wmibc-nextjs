@@ -23,7 +23,7 @@ const socials = [
   },
   {
     label: "TikTok",
-    href: "https://www.tiktok.com/",
+    href: "https://www.tiktok.com/@wmibc0", 
     icon: Music2,
   },
 ];
