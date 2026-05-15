@@ -49,7 +49,7 @@ const serviceLinks = [
   },
   {
     title: "Visit Visa from Qatar",
-    href: "/tourist-business-visit",
+    href: "/visit-visa",
     icon: Plane,
     description:
       "Get professional guidance for visit visa and tourist visa applications from Qatar.",
