@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { BadgeCheck, Building2, Globe2, Star } from "lucide-react";
 
 const trustStats = [
@@ -27,13 +30,57 @@ const trustStats = [
   },
 ];
 
+function CounterNumber({
+  end,
+  suffix = "",
+  duration = 1800,
+}: {
+  end: number;
+  suffix?: string;
+  duration?: number;
+}) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let startTime: number | null = null;
+    let animationFrame: number;
+
+    const animate = (currentTime: number) => {
+      if (!startTime) startTime = currentTime;
+
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      const easedProgress = 1 - Math.pow(1 - progress, 3);
+      const currentValue = Math.floor(easedProgress * end);
+
+      setCount(currentValue);
+
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(animate);
+      } else {
+        setCount(end);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(animationFrame);
+  }, [end, duration]);
+
+  return (
+    <span>
+      {count}
+      {suffix}
+    </span>
+  );
+}
+
 export default function TrustSection() {
   return (
     <section className="bg-white py-12 md:py-24">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         {/* Section Heading */}
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-(--brand-royal)">
+          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-(--brand-royal) sm:text-xs">
             Trusted Immigration Partner
           </p>
 
@@ -42,7 +89,7 @@ export default function TrustSection() {
           </h2>
 
           <p className="mt-6 text-base leading-relaxed text-(--text-body) sm:text-lg">
-            Achieve your global goals with Doha's premier immigration
+            Achieve your global goals with Doha&apos;s premier immigration
             consultancy. We provide expert visa guidance and personalized
             support from start to finish.
           </p>
@@ -74,36 +121,40 @@ export default function TrustSection() {
           })}
         </div>
 
-{/* Bottom Highlight Statistics based on image_e6bc43.png */}
-<div className="mt-16 overflow-hidden rounded-[2.5rem] bg-linear-to-br from-(--brand-navy) to-(--brand-royal) p-8 text-white shadow-xl md:p-12">
-  <div className="grid gap-10 text-center md:grid-cols-3 md:text-left">
-    
-    {/* Global Clients */}
-    <div className="space-y-1">
-      <p className="text-4xl font-black tracking-tight sm:text-5xl">1100+</p>
-      <p className="text-sm font-semibold uppercase tracking-wide text-blue-100/90">
-        Global Clients Assisted
-      </p>
-    </div>
+        {/* Bottom Highlight Statistics */}
+        <div className="mt-16 overflow-hidden rounded-[2rem] bg-linear-to-br from-(--brand-navy) to-(--brand-royal) p-6 text-white shadow-xl sm:rounded-[2.5rem] sm:p-8 md:p-12">
+          <div className="grid gap-8 text-center md:grid-cols-3 md:gap-10 md:text-left">
+            {/* Global Clients */}
+            <div className="space-y-1">
+              <p className="text-4xl font-black tracking-tight sm:text-5xl">
+                <CounterNumber end={1100} suffix="+" />
+              </p>
+              <p className="text-xs font-semibold uppercase tracking-wide text-blue-100/90 sm:text-sm">
+                Global Clients Assisted
+              </p>
+            </div>
 
-    {/* Global Reach */}
-    <div className="space-y-1 border-slate-400/20 py-6 md:border-x md:px-10 md:py-0">
-      <p className="text-4xl font-black tracking-tight sm:text-5xl">25+</p>
-      <p className="text-sm font-semibold uppercase tracking-wide text-blue-100/90">
-        Countries Covered
-      </p>
-    </div>
+            {/* Global Reach */}
+            <div className="space-y-1 border-slate-400/20 py-6 md:border-x md:px-10 md:py-0">
+              <p className="text-4xl font-black tracking-tight sm:text-5xl">
+                <CounterNumber end={25} suffix="+" />
+              </p>
+              <p className="text-xs font-semibold uppercase tracking-wide text-blue-100/90 sm:text-sm">
+                Countries Covered
+              </p>
+            </div>
 
-    {/* Process Quality */}
-    <div className="space-y-1 md:pl-10">
-      <p className="text-4xl font-black tracking-tight sm:text-5xl">100%</p>
-      <p className="text-sm font-semibold uppercase tracking-wide text-blue-100/90">
-        Transparent Process
-      </p>
-    </div>
-
-  </div>
-</div>
+            {/* Process Quality */}
+            <div className="space-y-1 md:pl-10">
+              <p className="text-4xl font-black tracking-tight sm:text-5xl">
+                <CounterNumber end={100} suffix="%" />
+              </p>
+              <p className="text-xs font-semibold uppercase tracking-wide text-blue-100/90 sm:text-sm">
+                Transparent Process
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
