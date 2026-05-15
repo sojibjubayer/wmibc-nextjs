@@ -16,12 +16,21 @@ import {
   Users2,
 } from "lucide-react";
 
-const jobCategories = ["Food Court Worker", "Super Market Worker"];
+const jobCategories = [
+  "Hospitality Worker",
+  "Hotel Staff",
+  "Restaurant Helper",
+  "Cleaner",
+  "Warehouse Worker",
+  "Construction Worker",
+  "General Helper",
+  "Kitchen Helper",
+];
 
 const visaInfo = [
-  { title: "Visa Type", value: "Germany Work Permit Visa" },
-  { title: "Main Keyword", value: "Germany Work Permit" },
-  { title: "Available Positions", value: "Food Court, Super Market" },
+  { title: "Visa Type", value: "Greece Work Permit Visa" },
+  { title: "Main Keyword", value: "Greece Work Permit" },
+  { title: "Available Sectors", value: "Hospitality, Construction, Warehouse" },
   { title: "Applicants", value: "Qatar-based applicants" },
 ];
 
@@ -34,67 +43,67 @@ const documents = [
   "Previous employment or experience certificates",
   "Educational certificates if available",
   "Police clearance if required",
-  "Pre-medical certificate required while submitting at embassy",
+  "Pre-medical certificate if required",
 ];
 
 const processSteps = [
   {
     title: "Profile Review",
-    desc: "We review your profile, current work experience, passport details, Qatar residence status, and eligibility for Germany work permit visa processing.",
+    desc: "We review your profile, current work experience, passport details, Qatar residence status, and eligibility for Greece work permit visa processing.",
     icon: Users2,
   },
   {
     title: "Job Category Selection",
-    desc: "Choose suitable Germany job categories such as food court worker or super market worker based on your profile and work experience.",
+    desc: "Choose suitable Greece job categories such as hospitality, construction, warehouse, cleaner, helper, and kitchen support roles based on your profile.",
     icon: BriefcaseBusiness,
   },
   {
     title: "Document Preparation",
-    desc: "Get support for Germany work visa checklist, application guidance, experience document checking, and embassy submission preparation.",
+    desc: "Get support for Greece work visa checklist, application guidance, experience document checking, and embassy submission preparation.",
     icon: FileCheck2,
   },
   {
     title: "Visa Processing Support",
-    desc: "Step-by-step support for Germany work permit processing, assessment updates, pre-medical guidance, documentation, and visa stamping process.",
+    desc: "Step-by-step support for Greece work permit processing, assessment updates, documentation, embassy submission, and visa stamping process.",
     icon: ShieldCheck,
   },
 ];
 
 const highlights = [
-  "Germany work permit visa support from Qatar",
-  "Food court and super market job categories",
-  "Current work experience required",
+  "Greece work permit visa support from Qatar",
+  "Hospitality, construction and warehouse sectors",
+  "Current work experience preferred",
   "Document checking and embassy submission guidance",
 ];
 
 const faqs = [
   {
-    q: "How can I apply for Germany work permit from Qatar?",
-    a: "You can start by checking your profile, passport validity, Qatar residence status, current work experience, and document readiness. WMIBC provides guidance for Germany work permit visa processing from Qatar.",
+    q: "How can I apply for Greece work permit from Qatar?",
+    a: "You can start by checking your profile, passport validity, Qatar residence status, work experience, and document readiness. WMIBC provides guidance for Greece work permit visa processing from Qatar.",
   },
   {
-    q: "What jobs are available for Germany work visa applicants?",
-    a: "Current Germany work visa job categories include food court worker and super market worker.",
+    q: "What jobs are available for Greece work visa applicants?",
+    a: "Current Greece work visa job categories include hospitality worker, hotel staff, restaurant helper, cleaner, warehouse worker, construction worker, general helper, and kitchen helper.",
   },
   {
-    q: "What documents are required for Germany work visa?",
-    a: "Common documents include passport, Qatar ID or residence permit copy, CV, photo, current work experience documents, previous employment certificates, educational certificates if available, and other supporting documents depending on employer and visa category.",
+    q: "What documents are required for Greece work visa?",
+    a: "Common documents include passport, Qatar ID or residence permit copy, CV, photo, work experience documents, previous employment certificates, educational certificates if available, and other supporting documents depending on employer and visa category.",
   },
   {
-    q: "How long does Germany work permit visa processing take?",
-    a: "The estimated processing time is around 3 to 4 months. Timeline may vary depending on assessment, employer file, embassy schedule, document readiness, and visa stamping process.",
+    q: "How long does Greece work permit visa processing take?",
+    a: "The estimated processing time may vary depending on employer file, work permit approval, embassy schedule, document readiness, and visa stamping process.",
   },
   {
-    q: "Is current work experience required for Germany work visa?",
-    a: "Yes. Current work experience is required along with documents for Germany work permit visa processing.",
+    q: "Is work experience required for Greece work visa?",
+    a: "Work experience is preferred and may be required depending on the job category, employer requirement, and visa file.",
   },
   {
-    q: "Is pre-medical required for Germany work visa submission?",
-    a: "Yes. Pre-medical is required while submitting at the embassy.",
+    q: "Can Qatar residents apply for Greece work permit visa?",
+    a: "Yes, Qatar-based applicants can apply if they meet the required profile, documentation, employer file, and embassy submission requirements.",
   },
 ];
 
-export default function GermanyWClient() {
+export default function GreeceWClient() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
@@ -102,8 +111,8 @@ export default function GermanyWClient() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-(--hero-gradient) pb-12 pt-10 lg:pb-32 lg:pt-24">
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          <div className="absolute -right-24 -top-24 h-96 w-96 rounded-full bg-yellow-400/10 blur-3xl" />
-          <div className="absolute -left-24 top-48 h-96 w-96 rounded-full bg-red-500/10 blur-3xl" />
+          <div className="absolute -right-24 -top-24 h-96 w-96 rounded-full bg-sky-400/10 blur-3xl" />
+          <div className="absolute -left-24 top-48 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl" />
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -111,8 +120,8 @@ export default function GermanyWClient() {
             {/* Background Image Container */}
             <div className="relative h-62.5 sm:h-87.5 lg:absolute lg:inset-0 lg:h-full lg:w-full">
               <img
-                src="/images/work/germany-work-permit-visa-qatar.webp"
-                alt="Germany work permit visa processing from Qatar"
+                src="/images/work/greece-work-permit-visa-qatar.webp"
+                alt="Greece work permit visa processing from Qatar"
                 className="h-full w-full object-cover object-center"
               />
 
@@ -125,21 +134,21 @@ export default function GermanyWClient() {
                 <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-white/60 bg-white/85 px-4 py-2 text-xs font-semibold text-(--brand-navy) shadow-sm backdrop-blur-md sm:text-sm">
                   <Sparkles className="h-4 w-4 shrink-0 text-yellow-500" />
                   <span className="truncate">
-                    Germany Work Permit Visa from Qatar
+                    Greece Work Permit Visa from Qatar
                   </span>
                 </div>
 
                 <h1 className="text-3xl font-black leading-[1.1] tracking-tight text-(--text-heading) sm:text-5xl md:text-6xl lg:text-7xl">
-                  Germany Work Permit <br className="hidden sm:block" />
+                  Greece Work Permit <br className="hidden sm:block" />
                   <span className="text-(--brand-royal)">
                     Visa Processing
                   </span>
                 </h1>
 
                 <p className="mt-6 max-w-xl text-base leading-relaxed text-(--text-body) sm:text-lg">
-                  Apply for Germany work permit visa from Qatar with
-                  professional support for food court and super market job
-                  categories.
+                  Apply for Greece work permit visa from Qatar with professional
+                  support for hospitality, construction, warehouse, cleaner, and
+                  helper job categories.
                 </p>
 
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center lg:mt-10">
@@ -147,7 +156,7 @@ export default function GermanyWClient() {
                     href="/contact"
                     className="inline-flex items-center justify-center rounded-2xl bg-(--brand-navy) px-8 py-4 text-center text-sm font-bold text-white shadow-lg transition-all duration-300 hover:scale-[1.02] hover:bg-(--brand-navy)/90 active:scale-95"
                   >
-                    Apply for Germany Work Permit
+                    Apply for Greece Work Permit
                   </Link>
 
                   <Link
@@ -186,13 +195,13 @@ export default function GermanyWClient() {
                       Available Jobs
                     </h2>
                     <p className="text-xs font-medium text-(--text-muted)">
-                      Germany work visa sectors
+                      Greece work visa sectors
                     </p>
                   </div>
                 </div>
 
                 <div className="flex flex-wrap gap-2">
-                  {["Food Court", "Super Market"].map((item) => (
+                  {["Hospitality", "Construction", "Warehouse"].map((item) => (
                     <span
                       key={item}
                       className="rounded-full border border-(--border-soft) bg-white px-4 py-2 text-[11px] font-bold text-(--brand-navy) shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-(--brand-royal)/20 hover:shadow-md"
@@ -211,7 +220,7 @@ export default function GermanyWClient() {
       <section className="border-y border-(--border-soft) bg-white">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-4 py-10 sm:px-6 md:grid-cols-3 lg:px-8">
           {[
-            { icon: BadgeCheck, text: "Germany work permit guidance" },
+            { icon: BadgeCheck, text: "Greece work permit guidance" },
             { icon: Building2, text: "Job category assistance" },
             { icon: ShieldCheck, text: "Visa document support" },
           ].map((item, i) => (
@@ -232,7 +241,7 @@ export default function GermanyWClient() {
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
         <header className="mb-12 max-w-3xl">
           <div className="mb-4 inline-flex rounded-full bg-(--bg-soft-blue) px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-(--brand-royal)">
-            Germany Work Permit Details
+            Greece Work Permit Details
           </div>
 
           <h2 className="text-3xl font-black text-(--text-heading) sm:text-4xl lg:text-5xl">
@@ -267,11 +276,11 @@ export default function GermanyWClient() {
             </h2>
 
             <p className="mt-4 text-(--text-body)">
-              Current Germany work permit positions for Qatar-based applicants.
+              Current Greece work permit positions for Qatar-based applicants.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {jobCategories.map((job) => (
               <div
                 key={job}
@@ -296,13 +305,13 @@ export default function GermanyWClient() {
             </div>
 
             <h2 className="text-3xl font-black tracking-tight text-(--text-heading) sm:text-4xl">
-              Germany work visa checklist
+              Greece work visa checklist
             </h2>
 
             <p className="mt-4 text-sm leading-7 text-(--text-body)">
-              Common documents for processing. Current work experience is
-              required, and pre-medical is required while submitting at the
-              embassy.
+              Common documents for processing. Final checklist may vary
+              depending on employer file, work permit approval, embassy
+              requirements, and visa category.
             </p>
 
             <Link
@@ -371,14 +380,13 @@ export default function GermanyWClient() {
           </div>
 
           <h2 className="text-3xl font-black tracking-tight text-(--text-heading) sm:text-4xl">
-            Germany work permit processing timeline
+            Greece work permit processing timeline
           </h2>
 
           <p className="mt-5 max-w-3xl text-sm leading-7 text-(--text-body) sm:text-base">
-            The estimated processing time is around 3 to 4 months. Timeline may
-            vary depending on assessment, employer file, embassy schedule,
-            document readiness, and visa stamping process. In some cases,
-            assessment reports may come within a week.
+            The processing timeline may vary depending on employer file, work
+            permit approval, embassy appointment availability, document
+            readiness, and visa stamping process.
           </p>
         </div>
       </section>
@@ -429,12 +437,12 @@ export default function GermanyWClient() {
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div>
               <h2 className="text-3xl font-black text-white sm:text-5xl">
-                Start your Germany journey today.
+                Start your Greece journey today.
               </h2>
 
               <p className="mt-6 text-lg text-white/70">
                 Professional consultation and document review for Qatar
-                residents applying for Germany work permit visa.
+                residents applying for Greece work permit visa.
               </p>
             </div>
 
