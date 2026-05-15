@@ -122,7 +122,7 @@ export default function TrustSection() {
         </div>
 
         {/* Bottom Highlight Statistics */}
-        <div className="mt-16 overflow-hidden rounded-[2rem] bg-linear-to-br from-(--brand-navy) to-(--brand-royal) p-6 text-white shadow-xl sm:rounded-[2.5rem] sm:p-8 md:p-12">
+        <div className="mt-16 overflow-hidden rounded-4xl bg-linear-to-br from-(--brand-navy) to-(--brand-royal) p-6 text-white shadow-xl sm:rounded-[2.5rem] sm:p-8 md:p-12">
           <div className="grid gap-8 text-center md:grid-cols-3 md:gap-10 md:text-left">
             {/* Global Clients */}
             <div className="space-y-1">

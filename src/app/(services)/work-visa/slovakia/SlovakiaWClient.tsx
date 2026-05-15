@@ -133,7 +133,7 @@ export default function SlovakiaWClient() {
                 <h1 className="text-3xl font-black leading-[1.08] tracking-tight text-(--text-heading) sm:text-5xl md:text-6xl lg:text-7xl">
                   Slovakia Work Permit{" "}
                   <br className="hidden sm:block" />
-                  <span className="text-(--brand-royal)">
+                  <span className="text-(--brand-royal) sm:text-5xl md:text-6xl">
                     Visa Processing
                   </span>
                 </h1>

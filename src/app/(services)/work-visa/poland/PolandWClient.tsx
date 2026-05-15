@@ -136,9 +136,9 @@ export default function PolandWClient() {
                   <span className="truncate">Poland Work Visa from Qatar</span>
                 </div>
 
-                <h1 className="text-3xl font-black leading-[1.1] tracking-tight text-slate-900 sm:text-5xl md:text-6xl lg:text-7xl">
+                <h1 className="text-3xl font-black leading-[1.1] tracking-tight text-slate-900 sm:text-5xl md:text-5xl">
                   Poland Work Permit <br className="hidden sm:block" />
-                  <span className="text-blue-600">Visa Processing</span>
+                  <span className="text-blue-600 sm:text-5xl md:text-6xl">Visa Processing</span>
                 </h1>
 
                 <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg">

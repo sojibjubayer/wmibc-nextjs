@@ -138,9 +138,9 @@ export default function GreeceWClient() {
                   </span>
                 </div>
 
-                <h1 className="text-3xl font-black leading-[1.1] tracking-tight text-(--text-heading) sm:text-5xl md:text-6xl lg:text-7xl">
+                <h1 className="text-3xl font-black leading-[1.1] tracking-tight text-(--text-heading) sm:text-5xl md:text-6xl">
                   Greece Work Permit <br className="hidden sm:block" />
-                  <span className="text-(--brand-royal)">
+                  <span className="text-(--brand-royal) sm:text-6xl md:text-6xl">
                     Visa Processing
                   </span>
                 </h1>

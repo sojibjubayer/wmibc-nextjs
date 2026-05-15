@@ -139,9 +139,9 @@ export default function PortugalWClient() {
                   </span>
                 </div>
 
-                <h1 className="text-3xl font-black leading-[1.1] tracking-tight text-slate-900 sm:text-5xl md:text-6xl lg:text-5xl">
+                <h1 className="text-3xl font-black leading-[1.1] tracking-tight text-slate-900 sm:text-5xl md:text-5xl">
                   Portugal work permit<br className="hidden sm:block" />
-                  <span className="text-blue-600"> Visa Processing</span>
+                  <span className="text-blue-600 sm:text-6xl md:text-6xl"> Visa Processing</span>
                 </h1>
 
                 <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg">
