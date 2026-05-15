@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   BadgeCheck,
@@ -9,8 +10,8 @@ import {
   Briefcase,
   Plane,
   GraduationCap,
+  Landmark,
 } from "lucide-react";
-import Image from "next/image";
 
 const trustPoints = [
   {
@@ -61,27 +62,41 @@ const serviceLinks = [
     description:
       "Discover study abroad guidance for student visas, admissions, and documentation support.",
   },
+  {
+    title: "Business Setup",
+    href: "/business-setup",
+    icon: Landmark,
+    description:
+      "Company formation support in Qatar and Europe with legal documentation, licensing, and expert consultation.",
+  },
+];
+
+const teamRoles = [
+  "Marketing Manager",
+  "Client Relationship Manager",
+  "Document Controller",
+  "Consultant Officer",
+  "Visa Processing Officer",
+  "Client Support Executive",
+  "Documentation Specialist",
+  "Application Support Officer",
+  "Business Consultant",
+  "Immigration Consultant",
 ];
 
 const teamMembers = Array.from({ length: 10 }).map((_, index) => {
-  const roles = [
-    "Marketing Manager",
-    "Client Relationship Manager",
-    "Document Controller",
-  ];
-
   return {
     name: "WMIBC Team",
-    role: roles[index] || "Consultant Officer",
+    role: teamRoles[index] || "Consultant Officer",
     image: `/images/team/team${index + 1}.webp`,
   };
 });
 
 export default function AboutClient() {
   return (
-    <main className="bg-white">
+    <main className="overflow-hidden bg-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-linear-to-br from-white via-slate-50 to-blue-50 py-20 md:py-28">
+      <section className="relative overflow-hidden bg-linear-to-br from-white via-slate-50 to-blue-50 py-16 sm:py-20 md:py-28">
         <div className="absolute inset-0 opacity-[0.03] mask-[linear-gradient(to_bottom,white,transparent)]">
           <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -99,32 +114,32 @@ export default function AboutClient() {
         </div>
 
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute -top-20 right-0 h-96 w-96 rounded-full bg-(--accent-cyan)/10 blur-3xl animate-pulse" />
-          <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-(--brand-royal)/10 blur-3xl" />
+          <div className="absolute -top-24 right-30 h-72 w-72 rounded-full bg-(--accent-cyan)/10 blur-3xl sm:h-96 sm:w-96" />
+          <div className="absolute bottom-0 left-30 h-72 w-72 rounded-full bg-(--brand-royal)/10 blur-3xl sm:h-96 sm:w-96" />
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-4 md:px-6">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mx-auto max-w-4xl text-center">
-            <span className="inline-block rounded-full bg-(--brand-royal)/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-(--brand-royal) mb-6">
+            <span className="mb-5 inline-flex rounded-full bg-(--brand-royal)/5 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-(--brand-royal) sm:text-xs">
               About WMIBC
             </span>
 
-            <h1 className="text-(--text-heading) text-4xl font-extrabold tracking-tight md:text-5xl lg:text-7xl">
+            <h1 className="text-(--text-heading) text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl lg:text-7xl">
               Your Gateway to{" "}
               <span className="text-(--brand-royal)">Global</span>{" "}
               Opportunities
             </h1>
 
-            <p className="text-(--text-body) mx-auto mt-8 max-w-3xl text-lg leading-relaxed md:text-xl opacity-90">
+            <p className="text-(--text-body) mx-auto mt-6 max-w-3xl text-base leading-relaxed opacity-90 sm:text-lg md:mt-8 md:text-xl">
               World Multinational Immigration & Business Consultancy (WMIBC)
-              provides premium support for work, student, and visit visas,
-              bridging the gap between Qatar and your future destination.
+              provides professional support for work visas, visit visas, student
+              visas, and business setup services from Qatar.
             </p>
 
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
+            <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:justify-center sm:gap-4">
               <Link
                 href="/contact"
-                className="group inline-flex items-center justify-center gap-2 rounded-full bg-(--brand-royal) px-8 py-4 text-sm font-bold text-white shadow-xl shadow-blue-600/20 transition-all hover:-translate-y-1 hover:bg-(--brand-navy)"
+                className="group inline-flex items-center justify-center gap-2 rounded-full bg-(--brand-royal) px-7 py-3.5 text-sm font-bold text-white shadow-xl shadow-blue-600/20 transition-all hover:-translate-y-1 hover:bg-(--brand-navy) sm:px-8 sm:py-4"
               >
                 Talk to an Expert
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -132,7 +147,7 @@ export default function AboutClient() {
 
               <Link
                 href="/work-visa"
-                className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-8 py-4 text-sm font-bold text-(--text-heading) transition-all hover:border-(--brand-sky)/30 hover:bg-slate-50"
+                className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-7 py-3.5 text-sm font-bold text-(--text-heading) transition-all hover:border-(--brand-sky)/30 hover:bg-slate-50 sm:px-8 sm:py-4"
               >
                 Explore Services
               </Link>
@@ -142,56 +157,56 @@ export default function AboutClient() {
       </section>
 
       {/* Intro Section */}
-      <section className="py-20">
-        <div className="mx-auto grid max-w-7xl gap-16 px-4 md:px-6 lg:grid-cols-2 lg:items-center">
+      <section className="py-16 sm:py-20">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-16">
           <div className="space-y-6">
             <div className="h-1 w-12 rounded-full bg-(--brand-royal)" />
 
-            <h2 className="text-(--text-heading) text-3xl font-bold tracking-tight md:text-4xl">
-              Helping Clients from Qatar <br /> Build Better Global Futures
+            <h2 className="text-(--text-heading) text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
+              Helping Clients from Qatar Build Better Global Futures
             </h2>
 
-            <div className="space-y-5 text-(--text-body) text-base leading-relaxed">
+            <div className="space-y-5 text-sm leading-relaxed text-(--text-body) sm:text-base">
               <p>
-                WMIBC stands as a beacon of trust in the Qatari consultancy
-                landscape, specializing in navigating the complexities of
-                international migration.
+                WMIBC stands as a trusted consultancy brand in Qatar, supporting
+                individuals and businesses with professional guidance for
+                international visa and business processes.
               </p>
 
               <p>
-                Whether it's a skilled work permit for Europe or a business
-                setup in North America, our tailored strategies ensure that
-                every client’s unique profile is presented with professional
-                precision.
+                Whether it is a skilled work permit, a tourist visa, a student
+                visa, or company formation support, our team focuses on clear
+                consultation, proper documentation, and a smooth client
+                experience.
               </p>
             </div>
           </div>
 
           {/* Mission Card */}
-          <div className="relative overflow-hidden rounded-[2.5rem] bg-linear-to-br from-(--brand-navy) to-(--brand-royal) p-10 text-white shadow-2xl group">
-            <div className="absolute -right-16 -top-16 h-32 w-32 rounded-full bg-(--accent-cyan)/20 blur-3xl transition-colors group-hover:bg-(--accent-cyan)/30" />
+          <div className="relative overflow-hidden rounded-4xl bg-linear-to-br from-(--brand-navy) to-(--brand-royal) p-6 text-white shadow-2xl sm:rounded-[2.5rem] sm:p-8 md:p-10">
+            <div className="absolute -right-16 -top-16 h-32 w-32 rounded-full bg-(--accent-cyan)/20 blur-3xl" />
 
-            <span className="text-(--accent-cyan) text-xs font-bold uppercase tracking-widest">
+            <span className="text-xs font-bold uppercase tracking-widest text-(--accent-cyan)">
               Our Mission
             </span>
 
-            <h3 className="mt-4 text-3xl font-bold">
-              We Drive to Achieve <br /> Your Goal
+            <h3 className="mt-4 text-2xl font-bold sm:text-3xl">
+              We Drive to Achieve Your Goal
             </h3>
 
-            <p className="mt-6 text-base leading-relaxed text-white/80">
+            <p className="mt-5 text-sm leading-relaxed text-white/80 sm:mt-6 sm:text-base">
               Our mission is to simplify complex visa and business processes
               through trusted consultation, proper documentation support, and
               personalized guidance tailored to each client’s needs.
             </p>
 
-            <div className="mt-10 rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+            <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm sm:mt-10 sm:p-6">
               <div className="flex items-start gap-4">
                 <Globe2 className="mt-1 h-6 w-6 shrink-0 text-(--accent-cyan)" />
 
                 <p className="text-sm leading-relaxed text-white/90 italic">
-                  "Empowering individuals in Qatar to transcend borders and
-                  achieve extraordinary success on the global stage."
+                  “Empowering individuals and businesses in Qatar to move
+                  forward with confidence, clarity, and professional support.”
                 </p>
               </div>
             </div>
@@ -200,36 +215,36 @@ export default function AboutClient() {
       </section>
 
       {/* Trust Points */}
-      <section className="bg-slate-50 py-20">
-        <div className="mx-auto max-w-7xl px-4 md:px-6">
-          <div className="mx-auto mb-16 max-w-3xl text-center">
-            <h2 className="text-(--text-heading) text-3xl font-bold tracking-tight md:text-4xl">
+      <section className="bg-slate-50 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-16">
+            <h2 className="text-(--text-heading) text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
               Why Clients Trust WMIBC
             </h2>
 
-            <p className="text-(--text-body) mt-4 text-lg">
+            <p className="text-(--text-body) mt-4 text-base sm:text-lg">
               We combine regional expertise with global standards.
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-5 sm:grid-cols-2 lg:gap-8 xl:grid-cols-4">
             {trustPoints.map((item) => {
               const Icon = item.icon;
 
               return (
                 <div
                   key={item.title}
-                  className="group rounded-3xl border border-slate-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-900/5"
+                  className="group rounded-3xl border border-slate-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-900/5 sm:p-8"
                 >
-                  <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-(--brand-royal) transition-colors duration-300 group-hover:bg-(--brand-royal) group-hover:text-white">
-                    <Icon className="h-7 w-7" />
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-(--brand-royal) transition-colors duration-300 group-hover:bg-(--brand-royal) group-hover:text-white sm:h-14 sm:w-14">
+                    <Icon className="h-6 w-6 sm:h-7 sm:w-7" />
                   </div>
 
-                  <h3 className="text-(--text-heading) mt-6 text-xl font-bold">
+                  <h3 className="text-(--text-heading) mt-5 text-lg font-bold sm:mt-6 sm:text-xl">
                     {item.title}
                   </h3>
 
-                  <p className="text-(--text-body) mt-4 text-sm leading-relaxed opacity-85">
+                  <p className="text-(--text-body) mt-3 text-sm leading-relaxed opacity-85 sm:mt-4">
                     {item.description}
                   </p>
                 </div>
@@ -240,47 +255,52 @@ export default function AboutClient() {
       </section>
 
       {/* Services */}
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-4 md:px-6">
-          <div className="mb-16 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+      <section className="py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="mb-10 flex flex-col justify-between gap-5 sm:mb-16 md:flex-row md:items-end">
             <div className="max-w-2xl">
-              <h2 className="text-(--text-heading) text-3xl font-bold md:text-4xl">
-                Professional Visa Solutions
+              <span className="inline-flex rounded-full bg-(--brand-royal)/5 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-(--brand-royal) sm:text-xs">
+                Our Services
+              </span>
+
+              <h2 className="text-(--text-heading) mt-4 text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
+                Visa & Business Consultancy Services
               </h2>
 
-              <p className="text-(--text-body) mt-4 text-lg">
-                Comprehensive support for every step of your international
-                journey.
+              <p className="text-(--text-body) mt-4 text-base leading-relaxed sm:text-lg">
+                Comprehensive support for visas, global mobility, and company
+                formation from Qatar.
               </p>
             </div>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-5 sm:grid-cols-2 lg:gap-8 xl:grid-cols-4">
             {serviceLinks.map((item) => {
               const Icon = item.icon;
 
               return (
                 <div
                   key={item.href}
-                  className="flex h-full flex-col rounded-3xl border border-slate-200 bg-white p-8 transition-all hover:border-(--brand-royal)/20 hover:shadow-2xl hover:shadow-blue-900/5"
+                  className="group flex h-full flex-col rounded-3xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-2 hover:border-(--brand-royal)/20 hover:shadow-2xl hover:shadow-blue-900/5 sm:p-8"
                 >
-                  <Icon className="mb-6 h-10 w-10 text-(--brand-sky)" />
+                  <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-50 text-(--brand-sky) transition-all duration-300 group-hover:bg-(--brand-royal) group-hover:text-white">
+                    <Icon className="h-7 w-7" />
+                  </div>
 
-                  <h3 className="text-(--text-heading) text-2xl font-bold">
+                  <h3 className="text-(--text-heading) text-xl font-bold sm:text-2xl">
                     {item.title}
                   </h3>
 
-                  <p className="text-(--text-body) mt-4 grow text-base leading-relaxed opacity-80">
+                  <p className="text-(--text-body) mt-4 grow text-sm leading-relaxed opacity-80 sm:text-base">
                     {item.description}
                   </p>
 
                   <Link
                     href={item.href}
-                    className="group text-(--brand-royal) mt-8 inline-flex items-center gap-2 text-sm font-bold"
+                    className="group/link mt-8 inline-flex items-center gap-2 text-sm font-bold text-(--brand-royal)"
                   >
                     Explore Service
-
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover/link:translate-x-1" />
                   </Link>
                 </div>
               );
@@ -290,75 +310,75 @@ export default function AboutClient() {
       </section>
 
       {/* Our Team */}
-      <section className="bg-slate-50 py-20">
-  <div className="mx-auto max-w-7xl px-4 md:px-6">
-    <div className="mx-auto mb-16 max-w-3xl text-center">
-      <span className="inline-block rounded-full bg-(--brand-royal)/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-(--brand-royal)">
-        Our Team
-      </span>
+      <section className="bg-slate-50 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-16">
+            <span className="inline-block rounded-full bg-(--brand-royal)/5 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-(--brand-royal) sm:text-xs">
+              Our Team
+            </span>
 
-      <h2 className="text-(--text-heading) mt-5 text-3xl font-bold tracking-tight md:text-4xl">
-        Meet the Professionals Behind WMIBC
-      </h2>
+            <h2 className="text-(--text-heading) mt-5 text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
+              Meet the Professionals Behind WMIBC
+            </h2>
 
-      <p className="text-(--text-body) mt-4 text-lg">
-        Experienced consultants dedicated to guiding your international journey
-        with professionalism and care.
-      </p>
-    </div>
-
-    <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-      {teamMembers.map((member) => (
-        <div
-          key={member.image}
-          className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-        >
-          <div className="relative aspect-4/5 overflow-hidden bg-slate-100">
-            <Image
-              src={member.image}
-              alt={`${member.name} - ${member.role} at WMIBC`}
-              fill
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 20vw"
-              className="object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-          </div>
-
-          <div className="p-5 text-center">
-            <h3 className="text-(--text-heading) text-base font-bold">
-              {member.name}
-            </h3>
-
-            <p className="text-(--text-body) mt-1 text-sm opacity-70">
-              {member.role}
+            <p className="text-(--text-body) mt-4 text-base leading-relaxed sm:text-lg">
+              Experienced consultants dedicated to guiding your international
+              journey with professionalism and care.
             </p>
           </div>
+
+          <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+            {teamMembers.map((member) => (
+              <div
+                key={member.image}
+                className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+              >
+                <div className="relative aspect-4/5 overflow-hidden bg-slate-100">
+                  <Image
+                    src={member.image}
+                    alt={`${member.name} - ${member.role} at WMIBC`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
+
+                <div className="p-5 text-center">
+                  <h3 className="text-(--text-heading) text-base font-bold">
+                    {member.name}
+                  </h3>
+
+                  <p className="text-(--text-body) mt-1 text-sm opacity-70">
+                    {member.role}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* CTA */}
-      <section className="pb-24 pt-20">
-        <div className="mx-auto max-w-7xl px-4 md:px-6">
-          <div className="relative overflow-hidden rounded-[3rem] bg-linear-to-r from-(--brand-navy) via-(--brand-navy) to-(--brand-royal) p-8 text-white md:p-16">
+      <section className="pb-16 pt-16 sm:pb-24 sm:pt-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="relative overflow-hidden rounded-4xl bg-linear-to-r from-(--brand-navy) via-(--brand-navy) to-(--brand-royal) p-6 text-white sm:rounded-[3rem] sm:p-10 md:p-16">
             <div className="absolute -bottom-32 -right-32 h-64 w-64 bg-(--accent-cyan)/10 blur-[100px]" />
 
-            <div className="relative flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between">
+            <div className="relative flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
               <div className="max-w-2xl space-y-4">
-                <h2 className="text-3xl font-bold leading-tight md:text-5xl">
-                  Ready to start your <br /> global journey?
+                <h2 className="text-2xl font-bold leading-tight sm:text-3xl md:text-5xl">
+                  Ready to start your global journey?
                 </h2>
 
-                <p className="text-lg text-white/70">
-                  Connect with Doha's most reliable consultancy and get an
-                  eligibility assessment today.
+                <p className="text-base leading-relaxed text-white/70 sm:text-lg">
+                  Connect with WMIBC and get professional consultation for your
+                  visa, documentation, or business setup requirements.
                 </p>
               </div>
 
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-3 rounded-full bg-white px-10 py-5 text-base font-bold text-(--brand-navy) shadow-2xl transition hover:scale-105 hover:bg-slate-100 active:scale-95"
+                className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-bold text-(--brand-navy) shadow-2xl transition hover:scale-105 hover:bg-slate-100 active:scale-95 sm:w-auto sm:px-10 sm:py-5 sm:text-base"
               >
                 Contact WMIBC
                 <ArrowRight className="h-5 w-5" />
