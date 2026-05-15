@@ -100,9 +100,9 @@ export default function Footer() {
                     href="tel:+97444029807"
                     className="transition-colors hover:text-white"
                   >
-                    +974 4402 9807
+                    +974 4029 8070
                   </a>
-                  <span className="mx-2 text-white/30">|</span>
+                  <br />
                   <a
                     href="tel:+97430221975"
                     className="transition-colors hover:text-white"
@@ -118,12 +118,6 @@ export default function Footer() {
                 Bangladesh Office
               </p>
 
-              <div className="mt-3 flex items-start gap-3">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-(--accent-cyan)" />
-                <p className="text-sm leading-6 text-white/75">
-                  Modern Mor, Sadar, Dinajpur, Bangladesh
-                </p>
-              </div>
 
               <div className="mt-3 flex items-start gap-3">
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-(--accent-cyan)" />
@@ -134,7 +128,7 @@ export default function Footer() {
                   >
                     +880 1786 552585
                   </a>
-                  <span className="mx-2 text-white/30">|</span>
+                  <br />
                   <a
                     href="tel:+8801757546065"
                     className="transition-colors hover:text-white"
