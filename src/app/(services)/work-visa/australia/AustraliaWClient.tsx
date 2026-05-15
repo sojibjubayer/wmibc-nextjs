@@ -112,7 +112,7 @@ export default function AustraliaWClient() {
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="relative overflow-hidden rounded-[2rem] border border-(--border-soft) bg-white shadow-2xl sm:rounded-[2.5rem] lg:rounded-[3rem]">
+          <div className="relative overflow-hidden rounded-4xl border border-(--border-soft) bg-white shadow-2xl sm:rounded-[2.5rem] lg:rounded-[3rem]">
             <div className="relative h-72 sm:h-96 lg:absolute lg:inset-0 lg:h-full lg:w-full">
               <Image
                 src="/images/work/australia-work-permit-visa-qatar.webp"
@@ -179,7 +179,7 @@ export default function AustraliaWClient() {
                 </div>
               </div>
 
-              <div className="rounded-[2rem] border border-white/70 bg-white/92 p-6 shadow-xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-(--brand-royal)/20 hover:shadow-2xl lg:block lg:rounded-[2.5rem] lg:p-8">
+              <div className="rounded-4xl border border-white/70 bg-white/92 p-6 shadow-xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-(--brand-royal)/20 hover:shadow-2xl lg:block lg:rounded-[2.5rem] lg:p-8">
                 <div className="mb-5 flex items-center gap-4 sm:mb-6">
                   <div className="rounded-2xl bg-(--bg-soft-blue) p-3 text-(--brand-royal)">
                     <PackageCheck className="h-6 w-6 sm:h-7 sm:w-7" />
@@ -415,7 +415,7 @@ export default function AustraliaWClient() {
 
       {/* CTA */}
       <section className="px-4 pb-16 sm:px-6 lg:px-8 lg:pb-20">
-        <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-(--brand-navy) p-7 text-center shadow-2xl sm:rounded-[2.5rem] sm:p-12 lg:p-20 lg:text-left">
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-4xl bg-(--brand-navy) p-7 text-center shadow-2xl sm:rounded-[2.5rem] sm:p-12 lg:p-20 lg:text-left">
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-10">
             <div>
               <h2 className="text-3xl font-black text-white sm:text-5xl">

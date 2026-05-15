@@ -16,11 +16,6 @@ import {
   Users2,
 } from "lucide-react";
 
-/** 
- * DATA ARRAYS
- * These must be defined outside the component to avoid 
- * the ReferenceError shown in image_1ade5d.png
- */
 
 const jobCategories = [
   "Hospitality Worker",

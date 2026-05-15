@@ -1,37 +1,39 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, MessageCircleQuestion } from "lucide-react";
+import Link from "next/link";
 
 const faqs = [
   {
     question: "Why should I choose WMIBC for my immigration process?",
     answer:
-      "WMIBC is a premier consultancy with offices in Qatar and Bangladesh, supporting applicants across GCC countries. We provide complete end-to-end assistance for work visas, visit visas, and student visas with professional guidance from eligibility checks to final submission.",
+      "WMIBC is a premier consultancy with established offices in Doha, Qatar and Bangladesh. We offer localized expertise for GCC residents, providing end-to-end support for work, visit, and student visas—from initial eligibility assessments to final embassy submissions.",
   },
   {
-    question: "What services do you offer?",
+    question: "What specific visa services do you offer?",
     answer:
-      "We provide support for work visas, visit visas, tourist visas, student visas, Europe business setup, Qatar business setup, documentation assistance, and professional immigration consultation for global destinations.",
+      "We specialize in Work Visas (Europe, UK, Canada), Student Visas (Australia, NZ, USA), and Visit/Tourist visas. Additionally, we provide comprehensive Business Setup services both in Qatar and for entrepreneurs looking to expand into the European market.",
   },
   {
     question: "How long does the visa process typically take?",
     answer:
-      "Processing time depends on the destination country, visa category, and document readiness. Most visit visa and work visa applications may take from a few days to several weeks depending on embassy and immigration requirements.",
+      "Timelines vary by destination and visa category. While some visit visas can be processed in a few business days, work and student visas may take several weeks. We prioritize document readiness to ensure the fastest possible processing time from the embassy.",
   },
   {
-    question: "What if my Schengen visa application is denied?",
+    question: "How do you assist with Schengen visa rejections?",
     answer:
-      "If your Schengen visa is denied, our team helps review the rejection reason, improve documentation, and guide you through reapplication strategies to increase approval chances.",
+      "In the event of a denial, our experts conduct a forensic review of your rejection letter. We identify documentation gaps, correct application errors, and develop a strategic re-application plan to significantly improve your approval chances.",
   },
   {
     question: "Can you help if my visa was previously rejected?",
     answer:
-      "Yes. We specialize in handling previous visa rejection cases by reviewing documentation gaps, correcting application issues, and preparing stronger resubmissions with professional support.",
+      "Yes. A previous rejection is not a permanent barrier. We specialize in complex cases, helping you rebuild a stronger application profile by addressing the specific concerns raised by immigration authorities in your previous attempt.",
   },
 ];
 
 export default function FAQSection() {
+  // Set to null to start with all closed, or 0 to start with the first one open
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleFAQ = (index: number) => {
@@ -39,61 +41,72 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="bg-(--bg-soft-blue) py-16 md:py-20">
-      <div className="mx-auto max-w-5xl px-4 md:px-6">
-        {/* Heading */}
+    <section className="bg-(--bg-soft-blue) py-16 md:py-24">
+      <div className="mx-auto max-w-4xl px-5 md:px-8">
+        
+        {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-(--brand-royal) text-sm font-semibold uppercase tracking-[0.18em]">
-            Frequently Asked Questions
-          </p>
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-(--brand-royal) shadow-sm">
+            <MessageCircleQuestion className="h-3.5 w-3.5" />
+            Common Inquiries
+          </div>
 
-          <h2 className="text-(--text-heading) mt-3 text-3xl font-bold tracking-tight md:text-4xl">
-            Answers to Common Visa & Immigration Questions
+          <h2 className="text-(--text-heading) text-balance text-3xl font-extrabold tracking-tight sm:text-4xl">
+            Clear Answers to Your Visa & Immigration Questions
           </h2>
 
-          <p className="text-(--text-body) mt-5 text-base leading-8">
-            Get clear answers about work visas, visit visas, student visas,
-            business setup, documentation, and immigration consultation from
-            WMIBC experts.
+          <p className="text-(--text-body) mt-6 text-base leading-relaxed sm:text-lg">
+            Everything you need to know about work permits, student pathways, 
+            and business setup with WMIBC experts.
           </p>
         </div>
 
         {/* FAQ List */}
-        <div className="mt-14 space-y-4">
+        <div className="mt-16 space-y-4">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
 
             return (
               <div
-                key={faq.question}
-                className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-[0_10px_30px_rgba(2,6,23,0.04)]"
+                key={index}
+                className={`group overflow-hidden rounded-4xl border transition-all duration-300 ${
+                  isOpen 
+                    ? "border-blue-200 bg-white shadow-lg" 
+                    : "border-slate-100 bg-white/50 hover:border-blue-100 hover:bg-white"
+                }`}
               >
                 <button
                   type="button"
                   onClick={() => toggleFAQ(index)}
-                  className="flex w-full items-center justify-between px-6 py-5 text-left md:px-8"
+                  aria-expanded={isOpen}
+                  className="flex w-full items-center justify-between px-6 py-6 text-left md:px-10"
                 >
-                  <span className="text-(--text-heading) pr-4 text-base font-semibold md:text-lg">
+                  <span className={`pr-4 text-base font-bold transition-colors md:text-lg ${
+                    isOpen ? "text-(--brand-royal)" : "text-(--text-heading)"
+                  }`}>
                     {faq.question}
                   </span>
 
-                  <ChevronDown
-                    className={`text-(--brand-royal) h-5 w-5 shrink-0 transition-transform duration-300 ${
+                  <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
+                    isOpen ? "bg-(--brand-royal) text-white" : "bg-slate-100 text-slate-400 group-hover:bg-blue-50 group-hover:text-(--brand-royal)"
+                  }`}>
+                    <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${
                       isOpen ? "rotate-180" : ""
-                    }`}
-                  />
+                    }`} />
+                  </div>
                 </button>
 
                 <div
-                  className={`grid transition-all duration-300 ${
+                  className={`grid transition-all duration-300 ease-in-out ${
                     isOpen
                       ? "grid-rows-[1fr] opacity-100"
                       : "grid-rows-[0fr] opacity-0"
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <div className="px-6 pb-6 md:px-8">
-                      <p className="text-(--text-body) text-sm leading-8 md:text-base">
+                    <div className="px-6 pb-8 md:px-10">
+                      <div className="h-px w-full bg-slate-100 mb-6" />
+                      <p className="text-(--text-body) text-sm leading-relaxed md:text-base">
                         {faq.answer}
                       </p>
                     </div>
@@ -104,31 +117,7 @@ export default function FAQSection() {
           })}
         </div>
 
-        {/* Bottom Help Box */}
-        <div className="from-(--brand-navy) to-(--brand-royal) mt-14 rounded-[28px] bg-linear-to-r p-8 text-white md:p-10">
-          <div className="text-center">
-            <p className="text-(--accent-cyan) text-sm font-semibold uppercase tracking-[0.18em]">
-              Still Have Questions?
-            </p>
-
-            <h3 className="mt-3 text-2xl font-bold md:text-3xl">
-              Speak with Our Immigration Experts Today
-            </h3>
-
-            <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-white/80 md:text-base">
-              Our team is ready to help you with professional advice for work
-              visas, visit visas, student visas, and business setup solutions
-              from Qatar and GCC countries.
-            </p>
-
-            <a
-              href="/contact"
-              className="mt-6 inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-(--brand-navy) transition hover:bg-slate-100"
-            >
-              Talk to an Expert
-            </a>
-          </div>
-        </div>
+    
       </div>
     </section>
   );

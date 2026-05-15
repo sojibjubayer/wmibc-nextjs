@@ -5,69 +5,68 @@ const trustStats = [
     icon: BadgeCheck,
     title: "High Success Rate",
     description:
-      "Reliable support for work visas, visit visas, and student visa applications with strong documentation guidance.",
+      "Reliable support for work, visit, and student visas with expert documentation guidance for higher approval chances.",
   },
   {
     icon: Building2,
-    title: "Qatar + Bangladesh Offices",
+    title: "Regional Presence",
     description:
-      "Physical offices with dedicated consultation support for applicants across Qatar, Bangladesh, and GCC countries.",
+      "Physical offices in Qatar and Bangladesh offering dedicated support for applicants across the GCC.",
   },
   {
     icon: Globe2,
-    title: "Global Destination Support",
+    title: "Global Destinations",
     description:
-      "Expert assistance for Europe, Canada, Australia, New Zealand, UK, and other leading immigration destinations.",
+      "Expert assistance for Europe, Canada, Australia, New Zealand, UK, and other top immigration hubs.",
   },
   {
     icon: Star,
-    title: "Trusted by Clients",
+    title: "Trusted Excellence",
     description:
-      "Professional consultation with transparent processes, faster support, and a strong focus on successful outcomes.",
+      "Transparent processes and personalized consultation focused on achieving faster and successful outcomes.",
   },
 ];
 
-export default function TrustSection() { 
+export default function TrustSection() {
   return (
-    <section className="bg-white py-16 md:py-20">
-      <div className="mx-auto max-w-7xl px-4 md:px-6">
+    <section className="bg-white py-12 md:py-24">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
         {/* Section Heading */}
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-(--brand-royal)">
+          <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-(--brand-royal)">
             Trusted Immigration Partner
           </p>
 
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-(--text-heading) md:text-4xl">
-            Why Professionals Choose WMIBC for Global Opportunities
+          <h2 className="mt-4 text-balance text-3xl font-extrabold tracking-tight text-(--text-heading) sm:text-4xl md:text-5xl">
+            Why Professionals Choose WMIBC
           </h2>
 
-          <p className="mt-5 text-base leading-8 text-(--text-body)">
-            WMIBC is a premier international immigration and business consultancy
-            helping professionals, students, and travelers achieve their global
-            goals through expert visa guidance, transparent processes, and
-            personalized support from start to finish.
+          <p className="mt-6 text-base leading-relaxed text-(--text-body) sm:text-lg">
+            Achieve your global goals with Doha's premier immigration
+            consultancy. We provide expert visa guidance and personalized
+            support from start to finish.
           </p>
         </div>
 
-        {/* Trust Stats */}
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+        {/* Trust Stats Grid */}
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {trustStats.map((item) => {
             const Icon = item.icon;
 
             return (
               <div
                 key={item.title}
-                className="rounded-3xl border border-slate-200 bg-white p-6 shadow-[0_10px_30px_rgba(2,6,23,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(2,6,23,0.08)]"
+                className="group relative flex flex-col rounded-3xl border border-slate-100 bg-white p-7 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)]"
               >
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-(--bg-soft-blue)">
-                  <Icon className="h-6 w-6 text-(--brand-royal)" />
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-(--bg-soft-blue) transition-colors group-hover:bg-(--brand-royal)">
+                  <Icon className="h-6 w-6 text-(--brand-royal) transition-colors group-hover:text-white" />
                 </div>
 
-                <h3 className="mt-5 text-lg font-semibold text-(--text-heading)">
+                <h3 className="mt-6 text-lg font-bold text-(--text-heading)">
                   {item.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-7 text-(--text-body)">
+                <p className="mt-3 text-sm leading-6 text-(--text-body)">
                   {item.description}
                 </p>
               </div>
@@ -75,31 +74,36 @@ export default function TrustSection() {
           })}
         </div>
 
-        {/* Bottom Highlight */}
-        <div className="mt-14 rounded-[28px] bg-linear-to-r from-(--brand-navy) to-(--brand-royal) p-8 text-white md:p-10">
-          <div className="grid gap-8 md:grid-cols-3">
-            <div>
-              <p className="text-3xl font-bold">5000+</p>
-              <p className="mt-2 text-sm text-white/80">
-                Successful Visa Applications Supported
-              </p>
-            </div>
+{/* Bottom Highlight Statistics based on image_e6bc43.png */}
+<div className="mt-16 overflow-hidden rounded-[2.5rem] bg-linear-to-br from-(--brand-navy) to-(--brand-royal) p-8 text-white shadow-xl md:p-12">
+  <div className="grid gap-10 text-center md:grid-cols-3 md:text-left">
+    
+    {/* Global Clients */}
+    <div className="space-y-1">
+      <p className="text-4xl font-black tracking-tight sm:text-5xl">1100+</p>
+      <p className="text-sm font-semibold uppercase tracking-wide text-blue-100/90">
+        Global Clients Assisted
+      </p>
+    </div>
 
-            <div>
-              <p className="text-3xl font-bold">10+ Years</p>
-              <p className="mt-2 text-sm text-white/80">
-                Experience in Immigration & Business Consultancy
-              </p>
-            </div>
+    {/* Global Reach */}
+    <div className="space-y-1 border-slate-400/20 py-6 md:border-x md:px-10 md:py-0">
+      <p className="text-4xl font-black tracking-tight sm:text-5xl">25+</p>
+      <p className="text-sm font-semibold uppercase tracking-wide text-blue-100/90">
+        Countries Covered
+      </p>
+    </div>
 
-            <div>
-              <p className="text-3xl font-bold">GCC Wide</p>
-              <p className="mt-2 text-sm text-white/80">
-                Supporting Applicants Across Qatar and GCC Countries
-              </p>
-            </div>
-          </div>
-        </div>
+    {/* Process Quality */}
+    <div className="space-y-1 md:pl-10">
+      <p className="text-4xl font-black tracking-tight sm:text-5xl">100%</p>
+      <p className="text-sm font-semibold uppercase tracking-wide text-blue-100/90">
+        Transparent Process
+      </p>
+    </div>
+
+  </div>
+</div>
       </div>
     </section>
   );

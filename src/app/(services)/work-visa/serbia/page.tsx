@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Apply for Serbia work permit visa from Qatar with WMIBC. Professional support for Serbia work visa processing, construction jobs, cleaner jobs, warehouse jobs, tile mason jobs, document checking and application guidance.",
   keywords: [
     "Serbia work permit",
-    "Serbia work visa",
+    "Serbia work visa", 
     "Serbia work permit visa",
     "Serbia work permit from Qatar",
     "Serbia work visa from Qatar",

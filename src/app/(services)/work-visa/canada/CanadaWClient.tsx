@@ -118,7 +118,7 @@ export default function CanadaWClient() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> 
           <div className="relative overflow-hidden rounded-4xl border border-(--border-soft) bg-white shadow-2xl sm:rounded-[2.5rem] lg:rounded-[3rem]">
             <div className="relative h-72 sm:h-96 lg:absolute lg:inset-0 lg:h-full lg:w-full">
-              <Image
+              <Image 
                 src="/images/work/canada-work-permit-visa-qatar.webp"
                 alt="Canada work permit visa processing support from Qatar for GCC and Bangladesh applicants"
                 fill
