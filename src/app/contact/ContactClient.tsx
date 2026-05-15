@@ -1,26 +1,15 @@
+"use client";
+import React from "react";
 import Link from "next/link";
 import {
   ArrowRight,
   Mail,
-  MapPin,
   MessageCircle,
   Phone,
   Clock3,
+  CheckCircle2,
+  ChevronDown,
 } from "lucide-react";
-
-const offices = [
-  {
-    title: "Qatar Office (Regional HQ)",
-    address:
-      "Gitco Tower, 13th Floor, Office No. 1306, Building No. 8, Street No. 820, Doha, Qatar",
-    phones: ["+974 4402 9807", "+974 3022 1975"],
-  },
-  {
-    title: "Bangladesh Office",
-    address: "Modern Mor, Sadar, Dinajpur, Bangladesh",
-    phones: ["+880 1786 552585", "+880 1757 546065"],
-  },
-];
 
 const quickHelp = [
   "Work Visa Consultation",
@@ -29,288 +18,171 @@ const quickHelp = [
   "Business Setup Assistance",
 ];
 
+const services = [
+  "Work Visa",
+  "Visit Visa",
+  "Student Visa",
+  "Business Setup",
+];
+
 export default function ContactClient() {
   return (
-    <main className="bg-white">
-      <section className="relative overflow-hidden bg-linear-to-br from-white via-sky-50 to-blue-100 py-20 md:py-24">
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute -top-20 right-0 h-72 w-72 rounded-full bg-(--accent-cyan)/10 blur-3xl" />
-          <div className="absolute bottom-0 left-0 h-72 w-72 rounded-full bg-(--brand-royal)/10 blur-3xl" />
+    <main className="min-h-screen overflow-hidden bg-white antialiased">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-linear-to-br from-white via-sky-50 to-blue-100 py-16 sm:py-20 md:py-24 lg:py-28">
+        <div className="pointer-events-none absolute inset-0 z-0">
+          <div className="absolute -top-24 right-15 h-64 w-64 rounded-full bg-cyan-500/10 blur-3xl sm:h-80 sm:w-80" />
+          <div className="absolute bottom-20 left-17.5 h-64 w-64 rounded-full bg-blue-600/10 blur-3xl sm:h-80 sm:w-80" />
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-4 md:px-6">
-          <div className="mx-auto max-w-4xl text-center">
-            <p className="text-(--brand-royal) text-sm font-semibold uppercase tracking-[0.18em]">
-              Contact WMIBC
-            </p>
-
-            <h1 className="text-(--text-heading) mt-4 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
-              Speak with Our Immigration & Business Experts
-            </h1>
-
-            <p className="text-(--text-body) mx-auto mt-6 max-w-3xl text-base leading-8 md:text-lg">
-              Contact WMIBC for trusted support with work visas, visit visas,
-              student visas, and business setup services from Qatar and beyond.
-            </p>
-          </div>
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-blue-700 text-xs font-bold uppercase tracking-[0.2em] sm:text-sm">
+            Contact WMIBC
+          </p>
+          <h1 className="text-slate-900 mt-4 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
+            Speak with Our Immigration & Business Experts
+          </h1>
+          <p className="text-slate-600 mx-auto mt-5 max-w-3xl text-sm leading-7 sm:text-base md:mt-6 md:text-lg md:leading-8">
+            Get professional guidance for work visas, visit visas, student
+            visas, and business setup services with a trusted consultancy
+            team.
+          </p>
         </div>
       </section>
 
-      <section className="py-16 md:py-20">
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 md:px-6 lg:grid-cols-[1.1fr_0.9fr]">
-          {/* Left */}
-          <div className="rounded-4xl border border-slate-200 bg-white p-6 shadow-[0_10px_30px_rgba(2,6,23,0.04)] md:p-8">
-            <p className="text-(--brand-royal) text-sm font-semibold uppercase tracking-[0.18em]">
+      {/* Contact Section - Fixed Alignment & Spacing */}
+      <section className="relative z-20 -mt-12 pb-20 sm:pb-24">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
+          
+          {/* Form Card (Left) */}
+          <div className="flex flex-col rounded-4xl border border-slate-200 bg-white p-6 shadow-xl shadow-blue-900/5 sm:p-8 lg:col-span-7">
+            <p className="text-blue-600 text-xs font-bold uppercase tracking-widest">
               Send Us a Message
             </p>
-
-            <h2 className="text-(--text-heading) mt-3 text-2xl font-bold md:text-3xl">
+            <h2 className="text-slate-900 mt-3 text-2xl font-bold tracking-tight sm:text-3xl">
               Let’s Discuss Your Next Step
             </h2>
-
-            <p className="text-(--text-body) mt-4 text-sm leading-7 md:text-base">
-              Fill in your details and our team will get back to you regarding
-              your visa or business setup requirements.
+            <p className="text-slate-500 mt-4 text-sm leading-7 sm:text-base">
+              Share your details below and our team will contact you regarding
+              your requirements.
             </p>
 
-            <form className="mt-8 space-y-5">
-              <div className="grid gap-5 md:grid-cols-2">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="text-(--text-heading) mb-2 block text-sm font-medium"
-                  >
-                    Full Name
-                  </label>
-                  <input
-                    id="name"
-                    type="text"
-                    placeholder="Enter your full name"
-                    className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-(--text-body) outline-none transition focus:border-(--brand-royal)"
-                  />
+            <form className="mt-8 space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <div className="grid gap-6 md:grid-cols-2">
+                <div className="space-y-2">
+                  <label htmlFor="name" className="text-slate-900 text-sm font-semibold">Full Name</label>
+                  <input id="name" type="text" placeholder="Enter your full name" className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm outline-none transition focus:border-blue-600 focus:bg-white focus:ring-4 focus:ring-blue-100" />
                 </div>
-
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="text-(--text-heading) mb-2 block text-sm font-medium"
-                  >
-                    Phone Number
-                  </label>
-                  <input
-                    id="phone"
-                    type="text"
-                    placeholder="Enter your phone number"
-                    className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-(--text-body) outline-none transition focus:border-(--brand-royal)"
-                  />
+                <div className="space-y-2">
+                  <label htmlFor="phone" className="text-slate-900 text-sm font-semibold">Phone Number</label>
+                  <input id="phone" type="tel" placeholder="Enter your phone number" className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm outline-none transition focus:border-blue-600 focus:bg-white focus:ring-4 focus:ring-blue-100" />
                 </div>
               </div>
 
-              <div className="grid gap-5 md:grid-cols-2">
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="text-(--text-heading) mb-2 block text-sm font-medium"
-                  >
-                    Email Address
-                  </label>
-                  <input
-                    id="email"
-                    type="email"
-                    placeholder="Enter your email address"
-                    className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-(--text-body) outline-none transition focus:border-(--brand-royal)"
-                  />
+              <div className="grid gap-6 md:grid-cols-2">
+                <div className="space-y-2">
+                  <label htmlFor="email" className="text-slate-900 text-sm font-semibold">Email Address</label>
+                  <input id="email" type="email" placeholder="Enter your email" className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm outline-none transition focus:border-blue-600 focus:bg-white focus:ring-4 focus:ring-blue-100" />
                 </div>
-
-                <div>
-                  <label
-                    htmlFor="service"
-                    className="text-(--text-heading) mb-2 block text-sm font-medium"
-                  >
-                    Service Needed
-                  </label>
-                  <select
-                    id="service"
-                    className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-(--text-body) outline-none transition focus:border-(--brand-royal)"
-                    defaultValue=""
-                  >
-                    <option value="" disabled>
-                      Select a service
-                    </option>
-                    <option>Work Visa</option>
-                    <option>Visit Visa</option>
-                    <option>Student Visa</option>
-                    <option>Business Setup</option>
-                  </select>
+                <div className="space-y-2">
+                  <label htmlFor="service" className="text-slate-900 text-sm font-semibold">Service Needed</label>
+                  <div className="relative">
+                    <select id="service" className="w-full appearance-none rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm outline-none transition focus:border-blue-600 focus:bg-white focus:ring-4 focus:ring-blue-100" defaultValue="">
+                      <option value="" disabled>Select a service</option>
+                      {services.map((s) => <option key={s} value={s}>{s}</option>)}
+                    </select>
+                    <ChevronDown className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+                  </div>
                 </div>
               </div>
 
-              <div>
-                <label
-                  htmlFor="message"
-                  className="text-(--text-heading) mb-2 block text-sm font-medium"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  rows={6}
-                  placeholder="Tell us about your requirement"
-                  className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-(--text-body) outline-none transition focus:border-(--brand-royal)"
-                />
+              <div className="space-y-2">
+                <label htmlFor="message" className="text-slate-900 text-sm font-semibold">Message</label>
+                <textarea id="message" rows={6} placeholder="Tell us about your requirement" className="w-full resize-none rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm outline-none transition focus:border-blue-600 focus:bg-white focus:ring-4 focus:ring-blue-100" />
               </div>
 
-              <button
-                type="submit"
-                className="inline-flex items-center gap-2 rounded-full bg-(--brand-royal) px-6 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-(--brand-navy)"
-              >
-                Send Inquiry
-                <ArrowRight className="h-4 w-4" />
+              <button type="submit" className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-blue-600 px-8 py-4 text-sm font-bold text-white shadow-lg shadow-blue-600/20 transition hover:-translate-y-0.5 hover:bg-blue-700 sm:w-auto">
+                Send Inquiry <ArrowRight className="h-4 w-4" />
               </button>
             </form>
           </div>
 
-          {/* Right */}
-          <div className="space-y-6">
-            <div className="rounded-4xl bg-linear-to-br from-(--brand-navy) to-(--brand-royal) p-6 text-white md:p-8">
-              <p className="text-(--accent-cyan) text-sm font-semibold uppercase tracking-[0.18em]">
-                Quick Contact
-              </p>
-
-              <h2 className="mt-3 text-2xl font-bold md:text-3xl">
-                We’re Ready to Help
-              </h2>
-
-              <p className="mt-4 text-sm leading-7 text-white/80 md:text-base">
-                Reach out for expert consultation on work visas, visit visas,
-                student visas, and business setup services.
-              </p>
-
-              <div className="mt-8 space-y-4">
-                <a
-                  href="tel:+97444029807"
-                  className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/10 p-4 transition hover:bg-white/15"
-                >
-                  <Phone className="mt-0.5 h-5 w-5 shrink-0 text-(--accent-cyan)" />
-                  <div>
-                    <p className="text-sm font-semibold text-white">Call Us</p>
-                    <p className="mt-1 text-sm text-white/80">
-                      +974 4402 9807
-                    </p>
-                  </div>
-                </a>
-
-                <a
-                  href="mailto:info@wmibc.com"
-                  className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/10 p-4 transition hover:bg-white/15"
-                >
-                  <Mail className="mt-0.5 h-5 w-5 shrink-0 text-(--accent-cyan)" />
-                  <div>
-                    <p className="text-sm font-semibold text-white">Email Us</p>
-                    <p className="mt-1 text-sm text-white/80">info@wmibc.com</p>
-                  </div>
-                </a>
-
-                <a
-                  href="https://wa.me/97430221975"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/10 p-4 transition hover:bg-white/15"
-                >
-                  <MessageCircle className="mt-0.5 h-5 w-5 shrink-0 text-(--accent-cyan)" />
-                  <div>
-                    <p className="text-sm font-semibold text-white">
-                      WhatsApp Support
-                    </p>
-                    <p className="mt-1 text-sm text-white/80">
-                      Fast response consultation
-                    </p>
-                  </div>
-                </a>
-
-                <div className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/10 p-4">
-                  <Clock3 className="mt-0.5 h-5 w-5 shrink-0 text-(--accent-cyan)" />
-                  <div>
-                    <p className="text-sm font-semibold text-white">
-                      Services We Handle
-                    </p>
-                    <div className="mt-2 flex flex-wrap gap-2">
-                      {quickHelp.map((item) => (
-                        <span
-                          key={item}
-                          className="rounded-full bg-white/10 px-3 py-1.5 text-xs font-medium text-white/85"
-                        >
-                          {item}
-                        </span>
-                      ))}
+          {/* Contact Info Sidebar (Right) */}
+          <div className="flex flex-col gap-6 lg:col-span-5">
+            {/* Quick Contact Card */}
+            <div className="relative overflow-hidden rounded-4xl bg-linear-to-br from-slate-900 to-blue-900 p-6 text-white shadow-xl sm:p-8">
+              <div className="relative z-10 space-y-6">
+                <div>
+                  <p className="text-cyan-400 text-xs font-bold uppercase tracking-widest">Quick Contact</p>
+                  <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">We’re Ready to Help</h2>
+                </div>
+                
+                <div className="space-y-3">
+                  {[
+                    { icon: Phone, label: "Call Us", val: "+974 4402 9807", href: "tel:+97444029807" },
+                    { icon: Mail, label: "Email Us", val: "info@wmibc.com", href: "mailto:info@wmibc.com" },
+                    { icon: MessageCircle, label: "WhatsApp Support", val: "Fast response consultation", href: "https://wa.me/97430221975" },
+                  ].map((item, i) => (
+                    <a key={i} href={item.href} className="flex items-center gap-4 rounded-2xl bg-white/5 border border-white/10 p-4 transition hover:bg-white/10">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-500/20 text-cyan-400">
+                        <item.icon className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <p className="text-xs text-slate-400 font-medium">{item.label}</p>
+                        <p className="text-sm font-semibold">{item.val}</p>
+                      </div>
+                    </a>
+                  ))}
+                  
+                  <div className="rounded-2xl bg-white/5 border border-white/10 p-4">
+                    <div className="flex items-center gap-4 mb-3">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-500/20 text-cyan-400">
+                            <Clock3 className="h-5 w-5" />
+                        </div>
+                        <p className="text-sm font-semibold">Services We Handle</p>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                        {quickHelp.map(h => (
+                            <span key={h} className="text-[10px] uppercase tracking-wider font-bold bg-white/10 px-2.5 py-1 rounded-md border border-white/5">{h}</span>
+                        ))}
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {offices.map((office) => (
-              <div
-                key={office.title}
-                className="rounded-[28px] border border-slate-200 bg-(--bg-soft-blue) p-6"
-              >
-                <h3 className="text-(--text-heading) text-lg font-semibold">
-                  {office.title}
-                </h3>
-
-                <div className="mt-4 flex items-start gap-3">
-                  <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-(--brand-royal)" />
-                  <p className="text-(--text-body) text-sm leading-7">
-                    {office.address}
-                  </p>
-                </div>
-
-                <div className="mt-4 flex items-start gap-3">
-                  <Phone className="mt-0.5 h-5 w-5 shrink-0 text-(--brand-royal)" />
-                  <div className="flex flex-col text-sm leading-7 text-(--text-body)">
-                    {office.phones.map((phone) => (
-                      <a
-                        key={phone}
-                        href={`tel:${phone.replace(/\s+/g, "")}`}
-                        className="transition hover:text-(--brand-royal)"
-                      >
-                        {phone}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-
-            <div className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-[0_10px_30px_rgba(2,6,23,0.04)]">
-              <h3 className="text-(--text-heading) text-lg font-semibold">
-                Need Immediate Help?
-              </h3>
-              <p className="text-(--text-body) mt-3 text-sm leading-7">
-                For faster support, contact us directly on WhatsApp or speak
-                with our team about your work visa, visit visa, student visa, or
-                business setup requirements.
+            {/* Need Help Card */}
+            <div className="rounded-4xl border border-slate-200 bg-white p-6 shadow-lg shadow-slate-200/50 sm:p-8">
+              <h3 className="text-slate-900 text-lg font-bold">Need Immediate Help?</h3>
+              <p className="text-slate-500 mt-2 text-sm leading-relaxed">
+                For faster support, contact our team directly on WhatsApp or explore available work visa opportunities.
               </p>
-
-              <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-                <a
-                  href="https://wa.me/97430221975"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-full border border-(--whatsapp) px-5 py-3 text-sm font-semibold text-(--whatsapp) transition hover:bg-(--whatsapp) hover:text-white"
-                >
-                  WhatsApp Now
+              <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                <a href="https://wa.me/97430221975" className="flex items-center justify-center gap-2 rounded-full border-2 border-[#25D366] px-4 py-3.5 text-xs font-bold text-[#25D366] transition hover:bg-[#25D366] hover:text-white">
+                  WhatsApp Now <MessageCircle className="h-4 w-4" />
                 </a>
-
-                <Link
-                  href="/work-visa"
-                  className="inline-flex items-center justify-center rounded-full bg-(--brand-royal) px-5 py-3 text-sm font-semibold text-white transition hover:bg-(--brand-navy)"
-                >
-                  Explore Work Visa
+                <Link href="/work-visa" className="flex items-center justify-center gap-2 rounded-full bg-blue-600 px-4 py-3.5 text-xs font-bold text-white transition hover:bg-blue-700">
+                  Explore Work Visa <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
             </div>
+
+            {/* Trust Points (Fixed Grid) */}
+            <div className="grid grid-cols-2 gap-3">
+              {[
+                "Professional consultation",
+                "Clear document guidance",
+                "Responsive support",
+                "Multiple visa services",
+              ].map((item) => (
+                <div key={item} className="flex items-center gap-2 rounded-xl border border-blue-100 bg-blue-50/50 p-3">
+                  <CheckCircle2 className="h-4 w-4 shrink-0 text-blue-600" />
+                  <span className="text-[10px] font-bold text-slate-700 uppercase tracking-tight">{item}</span>
+                </div>
+              ))}
+            </div>
           </div>
+          
         </div>
       </section>
     </main>
