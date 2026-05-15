@@ -13,7 +13,6 @@ export default function HomePage() {
       <ServicesSection />
       <TrustSection />
       <WhyChooseUsSection />
-      <SuccessStoriesSection />
       <FAQSection />
       <CTASection />
     </div>
