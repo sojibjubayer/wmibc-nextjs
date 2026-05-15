@@ -3,19 +3,18 @@
 import { useState } from "react";
 import Link from "next/link";
 import {
-  ArrowRight,
-  BadgeCheck,
-  BriefcaseBusiness,
-  Building2,
-  CheckCircle2,
-  ChevronDown,
-  ChevronRight,
-  FileCheck2,
-  Globe2,
-  ShieldCheck,
-  Sparkles,
-  Users2,
-} from "lucide-react";
+  ArrowRight, 
+  BadgeCheck, 
+  BriefcaseBusiness, 
+  Building2, 
+  CheckCircle2, 
+  ChevronDown, 
+  FileCheck2, 
+  Globe2, 
+  ShieldCheck, 
+  Sparkles, 
+  Users2, 
+} from "lucide-react"; 
 
 // --- Types ---
 type CountryItem = {
@@ -26,11 +25,11 @@ type CountryItem = {
   featured?: boolean;
 };
 
-// --- Static Data (Moved outside to optimize performance) ---
 const countries: CountryItem[] = [
   { name: "Greece", slug: "/work-visa/greece", tagline: "Hospitality, Construction, Warehouse", roles: ["Hospitality", "Construction", "Warehouse"], featured: true },
   { name: "Portugal", slug: "/work-visa/portugal", tagline: "Agriculture D1 Work Visa", roles: ["Agriculture D1"], featured: true },
   { name: "Bulgaria", slug: "/work-visa/bulgaria", tagline: "Hospitality, Construction, Warehouse, Helper", roles: ["Hospitality", "Construction", "Warehouse", "Helper"], featured: true },
+  { name: "Germany", slug: "/work-visa/germany", tagline: "Food Court, Super Market", roles: ["Food Court", "Super Market"], featured: true },
   { name: "Poland", slug: "/work-visa/poland", tagline: "Construction Worker, Cleaner", roles: ["Construction Worker", "Cleaner"], featured: true },
   { name: "Slovakia", slug: "/work-visa/slovakia", tagline: "Factory Worker, Warehouse, Helper", roles: ["Factory Worker", "Warehouse", "Helper"], featured: true },
   { name: "Italy", slug: "/work-visa/italy", tagline: "Light Duty Driver, Forklift Driver, Agricultural Worker, Waiter, Cleaner, Factory Worker", roles: ["Light Duty Driver", "Forklift Driver", "Agricultural Worker", "Waiter / Waitress", "Cleaner", "Factory Worker"] },
