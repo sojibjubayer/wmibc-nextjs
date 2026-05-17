@@ -40,7 +40,7 @@ export default function ContactClient() {
             Contact WMIBC
           </p>
           <h1 className="text-slate-900 mt-4 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-            Speak with Our Immigration & Business Experts
+            Connect with Our Immigration & Business Experts
           </h1>
           <p className="text-slate-600 mx-auto mt-5 max-w-3xl text-sm leading-7 sm:text-base md:mt-6 md:text-lg md:leading-8">
             Get professional guidance for work visas, visit visas, student

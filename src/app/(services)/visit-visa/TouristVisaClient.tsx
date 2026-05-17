@@ -96,7 +96,7 @@ export default function TouristVisaClient() {
                 "Embassy document guidance",
                 "Tourist & family visit visas",
               ].map((item) => (
-                <div
+                <div 
                   key={item}
                   className="rounded-2xl border border-white/70 bg-white/60 px-4 py-3 text-xs font-bold text-(--text-heading) shadow-sm backdrop-blur sm:text-sm"
                 >
@@ -218,7 +218,7 @@ export default function TouristVisaClient() {
               <Link
                 key={country.name}
                 href={country.slug}
-                className="group relative flex min-h-[220px] flex-col rounded-[28px] border border-(--border-soft) bg-white p-6 shadow-(--shadow-soft) transition-all duration-300 hover:-translate-y-1.5 hover:border-(--brand-royal)/40 hover:shadow-xl"
+                className="group relative flex min-h-55 flex-col rounded-[28px] border border-(--border-soft) bg-white p-6 shadow-(--shadow-soft) transition-all duration-300 hover:-translate-y-1.5 hover:border-(--brand-royal)/40 hover:shadow-xl"
               >
                 {country.popular && (
                   <div className="absolute right-4 top-4 rounded-full bg-(--accent-cyan)/10 px-3 py-1 text-[10px] font-black uppercase tracking-wider text-(--accent-cyan)">
@@ -255,7 +255,7 @@ export default function TouristVisaClient() {
             ))}
           </div>
         ) : (
-          <div className="rounded-[2rem] border border-dashed border-(--border-soft) bg-white p-10 text-center">
+          <div className="rounded-4xl border border-dashed border-(--border-soft) bg-white p-10 text-center">
             <h3 className="text-xl font-black text-(--text-heading)">
               No destination found
             </h3>
@@ -322,7 +322,7 @@ export default function TouristVisaClient() {
 
       {/* Checklist Section */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-        <div className="rounded-[2rem] border border-(--border-soft) bg-white p-6 shadow-sm sm:rounded-[40px] sm:p-8 lg:p-16">
+        <div className="rounded-4xl border border-(--border-soft) bg-white p-6 shadow-sm sm:rounded-[40px] sm:p-8 lg:p-16">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
               <div className="mb-4 inline-flex rounded-full bg-(--bg-soft-blue) px-4 py-1.5 text-sm font-semibold text-(--brand-royal)">
@@ -360,7 +360,7 @@ export default function TouristVisaClient() {
             </div>
 
             <div className="relative">
-              <div className="flex aspect-square items-center justify-center rounded-[2rem] bg-(--bg-soft-blue) sm:rounded-4xl">
+              <div className="flex aspect-square items-center justify-center rounded-4xl bg-(--bg-soft-blue) sm:rounded-4xl">
                 <Map className="h-40 w-40 text-(--brand-royal)/20 sm:h-48 sm:w-48" />
 
                 <div className="absolute inset-0 flex items-center justify-center p-6">
@@ -388,7 +388,7 @@ export default function TouristVisaClient() {
 
       {/* CTA Section */}
       <section className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-[2rem] bg-linear-to-br from-(--brand-royal) to-(--brand-navy) p-8 text-center text-white shadow-2xl sm:rounded-[40px] sm:p-12 lg:p-16">
+        <div className="relative overflow-hidden rounded-4xl bg-linear-to-br from-(--brand-royal) to-(--brand-navy) p-8 text-center text-white shadow-2xl sm:rounded-[40px] sm:p-12 lg:p-16">
           <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
 
           <div className="relative z-10">
